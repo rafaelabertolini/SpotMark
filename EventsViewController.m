@@ -25,7 +25,7 @@
     // Change the properties of the imageView and tableView (these could be set
     // in interface builder instead).
     //
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
     _tableView.rowHeight = 100;
     _tableView.backgroundColor = [UIColor clearColor];
     
