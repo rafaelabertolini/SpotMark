@@ -9,6 +9,7 @@
 #import "EventsViewController.h"
 #import <UIKit/UIKit.h>
 
+
 @interface EventsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -63,6 +64,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation
