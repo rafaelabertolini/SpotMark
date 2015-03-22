@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
-
+#import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 @interface ViewController ()
 
 @end
@@ -16,7 +18,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    FBLoginView *loginView = [[FBLoginView alloc] init];
+    loginView.center = self.view.center;
+    [self.view addSubview:loginView];
+    
+//    if (![PFFacebookUtils isLinkedWithUser:user]) {
+//        [PFFacebookUtils linkUser:user permissions:nil block:^(BOOL succeeded, NSError *error) {
+//            if (succeeded) {
+//                NSLog(@"Woohoo, user logged in with Facebook!");
+//            }
+//        }];
+//    }
 }
 
 - (void)didReceiveMemoryWarning {
