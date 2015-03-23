@@ -33,6 +33,7 @@
 		0A32C2921AC08FEB00025127 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */; };
 		0A32C2941AC08FEB00025127 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C2901AC08FEB00025127 /* ParseFacebookUtils.framework */; };
 		0A32C2951AC0901E00025127 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C28F1AC08FEB00025127 /* Parse.framework */; };
+		955619541AC099B800010C68 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619531AC099B800010C68 /* EventsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		0A32C28F1AC08FEB00025127 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		0A32C2901AC08FEB00025127 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		955619521AC099B800010C68 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsViewController.h; path = ../EventsViewController.h; sourceTree = "<group>"; };
+		955619531AC099B800010C68 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsViewController.m; path = ../EventsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				0A32BF131ABE039E00025127 /* AppDelegate.m */,
 				0A32BF151ABE039E00025127 /* ViewController.h */,
 				0A32BF161ABE039E00025127 /* ViewController.m */,
+				955619521AC099B800010C68 /* EventsViewController.h */,
+				955619531AC099B800010C68 /* EventsViewController.m */,
 				0A32BF181ABE039E00025127 /* Main.storyboard */,
 				0A32BF1B1ABE039E00025127 /* Images.xcassets */,
 				0A32BF1D1ABE039E00025127 /* LaunchScreen.xib */,
