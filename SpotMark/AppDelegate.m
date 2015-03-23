@@ -29,6 +29,17 @@
                   clientKey:@"UlA9Y5wpNe1nFWADy9jLmGCHCoPT1dnkIWdAJ2RN"];
     [PFFacebookUtils initializeFacebook];
     
+    
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:1 green:0.56 blue:0.02 alpha:1]];
+
+    
+    [[UITabBar appearance] setTranslucent:NO];
+    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:1 green:0.38 blue:0.21 alpha:255]];
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    
+
 //    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
 }
