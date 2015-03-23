@@ -11,6 +11,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet FBLoginView *loginButtom;
 
 @end
 
@@ -19,9 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     FBLoginView *loginView = [[FBLoginView alloc] init];
-    loginView.center = self.view.center;
-    [self.view addSubview:loginView];
-    
+
 //    if (![PFFacebookUtils isLinkedWithUser:user]) {
 //        [PFFacebookUtils linkUser:user permissions:nil block:^(BOOL succeeded, NSError *error) {
 //            if (succeeded) {

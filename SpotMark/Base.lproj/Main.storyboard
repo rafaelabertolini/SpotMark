@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,21 +20,45 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="JOf-Dq-Mhn">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpQ-dY-9dO" customClass="FBLoginView">
+                                <rect key="frame" x="30" y="396" width="540" height="82"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IpQ-dY-9dO" secondAttribute="height" multiplier="600:91" id="xfI-9J-bzn"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpotMark" translatesAutoresizingMaskIntoConstraints="NO" id="yLx-R7-jrE">
+                                <rect key="frame" x="25" y="99" width="551" height="198"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yLx-R7-jrE" secondAttribute="height" multiplier="454:163" id="8Ok-xT-FTu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IpQ-dY-9dO" secondAttribute="trailing" constant="30" id="21D-ek-mD8"/>
                             <constraint firstAttribute="bottom" secondItem="JOf-Dq-Mhn" secondAttribute="bottom" id="KHg-aH-y8s"/>
+                            <constraint firstItem="JOf-Dq-Mhn" firstAttribute="centerY" secondItem="yLx-R7-jrE" secondAttribute="centerY" constant="102.5" id="M4B-aA-Xl5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IpQ-dY-9dO" secondAttribute="bottom" constant="122" id="OkW-Qd-Z4i"/>
                             <constraint firstItem="JOf-Dq-Mhn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P5h-L5-z0a"/>
+                            <constraint firstItem="yLx-R7-jrE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="Sqp-S4-j24"/>
                             <constraint firstAttribute="trailing" secondItem="JOf-Dq-Mhn" secondAttribute="trailing" id="hdK-RH-mzh"/>
+                            <constraint firstAttribute="trailing" secondItem="yLx-R7-jrE" secondAttribute="trailing" constant="24" id="iMQ-sy-MTl"/>
+                            <constraint firstItem="IpQ-dY-9dO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="lJb-EC-bL2"/>
                             <constraint firstItem="JOf-Dq-Mhn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rBj-6a-5D9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButtom" destination="IpQ-dY-9dO" id="0OP-yU-q0s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1014.5" y="658"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image" width="749" height="1334"/>
+        <image name="SpotMark" width="706" height="203"/>
     </resources>
 </document>
