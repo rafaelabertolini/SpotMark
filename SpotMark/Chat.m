@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Lucas Fraga Schuler. All rights reserved.
 //
 
-#import "NSObject+Chat.h"
+#import "Chat.h"
 
 @implementation NSObject (Chat)
 
