@@ -23,6 +23,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)create:(id)sender {
+}
+
+- (BOOL) hidesBottomBarWhenPushed{
+    return YES;
+}
 
 /*
 #pragma mark - Navigation

@@ -21,11 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     FBLoginView *loginView = [[FBLoginView alloc] init];
-    loginView.readPermissions =    @[@"phone_number",
-                                        @"public_profile",
-                                        @"user_location",
-                                        @"user_birthday",
-                                        @"user_likes"];
+    loginView.readPermissions =    @[@"email", @"public_profile"];
     loginView.delegate = self;
 }
 
@@ -43,7 +39,7 @@
 //              NSLog(@"error: %@", error);
 //          }
 //      }];
-//        [self performSegueWithIdentifier:@"gotoEvents" sender: nil];
+       [self performSegueWithIdentifier:@"gotoEvents" sender: nil];
 //    }
 
 }
@@ -59,8 +55,7 @@
 
 
 -(void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
-   NSLog(@"%@",[user objectForKey:@"user_birthday"]);
-    NSLog(@"%@",[user objectForKey:@"phone_number"]);
+    NSLog(@"%@",user.id);
     NSLog(@"%@",[user objectForKey:@"email"]);
 }
 
