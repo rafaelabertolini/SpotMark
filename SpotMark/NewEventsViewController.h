@@ -7,7 +7,6 @@
 //
 
 
-@end
 #import <UIKit/UIKit.h>
 
 @interface NewEventsViewController : UIViewController
