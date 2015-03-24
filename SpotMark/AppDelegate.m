@@ -31,12 +31,12 @@
     
     
     [[UINavigationBar appearance] setTranslucent:NO];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:1 green:0.56 blue:0.02 alpha:0]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:1 green:0.58 blue:0 alpha:255]];
 
     
-    [[UITabBar appearance] setTranslucent:NO];
-    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:1 green:0.43 blue:0.15 alpha:0]];
-    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setBarTintColor:[UIColor clearColor]];
+    [[UITabBar appearance] setBackgroundImage:[UIImage new]];
+
     
     
 
