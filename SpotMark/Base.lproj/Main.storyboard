@@ -274,18 +274,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Rj-BD-gFf">
-                                <rect key="frame" x="51" y="116" width="499" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="HBg-BS-2Is">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Rj-BD-gFf">
+                                <rect key="frame" x="0.0" y="84" width="600" height="30"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ep7-og-8Fe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvY-2D-Lpd">
-                                <rect key="frame" x="51" y="176" width="499" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Localization" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KOL-60-v1g">
-                                <rect key="frame" x="51" y="234" width="499" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Localization" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KOL-60-v1g">
+                                <rect key="frame" x="0.0" y="221" width="600" height="30"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rmn-LT-3ep"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -302,10 +310,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-UR-Zkg">
-                                <rect key="frame" x="0.0" y="512" width="600" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="502" width="600" height="50"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="27"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleShadowColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="create:" destination="6gQ-Q7-tbB" eventType="touchUpInside" id="aAI-Qi-GQ9"/>
@@ -320,12 +329,34 @@
                                     <!--2015-03-24 19:01:58 +0000-->
                                 </date>
                             </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvY-2D-Lpd">
+                                <rect key="frame" x="0.0" y="137" width="600" height="60"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="TSC-ob-voq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="Ttw-BL-lOo" secondAttribute="centerY" constant="-92" id="6Dd-th-E4x"/>
                             <constraint firstItem="gtZ-UR-Zkg" firstAttribute="leading" secondItem="oFE-dw-ZS4" secondAttribute="leading" id="7CC-WC-SF0"/>
+                            <constraint firstAttribute="trailing" secondItem="YvY-2D-Lpd" secondAttribute="trailing" id="85u-CW-qqQ"/>
+                            <constraint firstItem="7Rj-BD-gFf" firstAttribute="leading" secondItem="oFE-dw-ZS4" secondAttribute="leading" id="9sL-TK-c8M"/>
                             <constraint firstAttribute="trailing" secondItem="Ttw-BL-lOo" secondAttribute="trailing" id="AM8-pe-KCd"/>
+                            <constraint firstItem="YvY-2D-Lpd" firstAttribute="top" secondItem="7Rj-BD-gFf" secondAttribute="bottom" constant="23" id="AUg-Lv-rTK"/>
+                            <constraint firstAttribute="trailing" secondItem="7Rj-BD-gFf" secondAttribute="trailing" id="E9o-2R-2kq"/>
+                            <constraint firstItem="Ttw-BL-lOo" firstAttribute="top" secondItem="KOL-60-v1g" secondAttribute="bottom" constant="33" id="Gw1-T9-5Uf"/>
+                            <constraint firstAttribute="trailing" secondItem="KOL-60-v1g" secondAttribute="trailing" id="Qd6-z5-BJH"/>
+                            <constraint firstItem="KOL-60-v1g" firstAttribute="top" secondItem="YvY-2D-Lpd" secondAttribute="bottom" constant="24" id="Rch-R7-wCZ"/>
+                            <constraint firstItem="KOL-60-v1g" firstAttribute="leading" secondItem="oFE-dw-ZS4" secondAttribute="leading" id="VhD-SF-hka"/>
+                            <constraint firstItem="KOL-60-v1g" firstAttribute="top" secondItem="YvY-2D-Lpd" secondAttribute="bottom" constant="24" id="bJi-52-zNx"/>
+                            <constraint firstItem="Ttw-BL-lOo" firstAttribute="top" secondItem="KOL-60-v1g" secondAttribute="bottom" constant="33" id="fhM-3w-8FN"/>
+                            <constraint firstItem="YvY-2D-Lpd" firstAttribute="top" secondItem="7Rj-BD-gFf" secondAttribute="bottom" constant="23" id="gp8-2t-fT2"/>
+                            <constraint firstItem="YvY-2D-Lpd" firstAttribute="leading" secondItem="oFE-dw-ZS4" secondAttribute="leading" id="iZ0-jq-XGP"/>
                             <constraint firstItem="Ttw-BL-lOo" firstAttribute="leading" secondItem="oFE-dw-ZS4" secondAttribute="leading" id="j5f-pG-aAL"/>
                             <constraint firstAttribute="trailing" secondItem="gtZ-UR-Zkg" secondAttribute="trailing" id="lbY-P5-aOY"/>
                             <constraint firstAttribute="centerY" secondItem="gtZ-UR-Zkg" secondAttribute="centerY" constant="-226.5" id="sRn-Yn-Yzw"/>
@@ -357,7 +388,7 @@
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="07s-Np-hEV"/>
+        <segue reference="TZB-Lm-RUj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

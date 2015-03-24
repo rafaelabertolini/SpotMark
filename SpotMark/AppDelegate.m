@@ -38,6 +38,15 @@
     [[UITabBar appearance] setBackgroundImage:[UIImage new]];
 
     
+//    [self.datePicker setValue:[UIColor whiteColor] forKeyPath:@"textColor"];
+//    
+//    SEL selector = NSSelectorFromString(@"setHighlightsToday:");
+//    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDatePicker instanceMethodSignatureForSelector:selector]];
+//    BOOL no = NO;
+//    [invocation setSelector:selector];
+//    [invocation setArgument:&no atIndex:2];
+//    [invocation invokeWithTarget:self.datePicker];
+//    
     
 
 //    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
