@@ -13,7 +13,7 @@
 @interface Event : NSObject
 
 @property NSString *name;
-@property NSString *description;
+@property NSString *desc;
 @property NSString *local;
 @property NSDate *date;
 @property NSDate *time;
