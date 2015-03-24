@@ -124,23 +124,7 @@
 		0A32BF021ABE039E00025127 = {
 			isa = PBXGroup;
 			children = (
-				0A32C28D1AC08FEB00025127 /* Bolts.framework */,
-				0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */,
-				0A32C28F1AC08FEB00025127 /* Parse.framework */,
-				0A32C2901AC08FEB00025127 /* ParseFacebookUtils.framework */,
-				0A32C1501ABE598F00025127 /* libsqlite3.dylib */,
-				0A32C1511ABE598F00025127 /* libz.dylib */,
-				0A32C13A1ABE597900025127 /* Accounts.framework */,
-				0A32C13B1ABE597900025127 /* AudioToolbox.framework */,
-				0A32C13C1ABE597900025127 /* CFNetwork.framework */,
-				0A32C13D1ABE597900025127 /* CoreGraphics.framework */,
-				0A32C13E1ABE597900025127 /* CoreLocation.framework */,
-				0A32C13F1ABE597900025127 /* MobileCoreServices.framework */,
-				0A32C1401ABE597900025127 /* QuartzCore.framework */,
-				0A32C1411ABE597900025127 /* Security.framework */,
-				0A32C1421ABE597900025127 /* Social.framework */,
-				0A32C1431ABE597900025127 /* StoreKit.framework */,
-				0A32C1441ABE597900025127 /* SystemConfiguration.framework */,
+				955619551AC1B2E600010C68 /* Frameworks */,
 				0A32BF0D1ABE039E00025127 /* SpotMark */,
 				0A32BF271ABE039E00025127 /* SpotMarkTests */,
 				0A32BF0C1ABE039E00025127 /* Products */,
@@ -210,6 +194,30 @@
 				0A32C16D1ABF24A800025127 /* NSObject+Chat.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		955619551AC1B2E600010C68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A32C28D1AC08FEB00025127 /* Bolts.framework */,
+				0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */,
+				0A32C28F1AC08FEB00025127 /* Parse.framework */,
+				0A32C2901AC08FEB00025127 /* ParseFacebookUtils.framework */,
+				0A32C1501ABE598F00025127 /* libsqlite3.dylib */,
+				0A32C1511ABE598F00025127 /* libz.dylib */,
+				0A32C13A1ABE597900025127 /* Accounts.framework */,
+				0A32C13B1ABE597900025127 /* AudioToolbox.framework */,
+				0A32C13C1ABE597900025127 /* CFNetwork.framework */,
+				0A32C13D1ABE597900025127 /* CoreGraphics.framework */,
+				0A32C13E1ABE597900025127 /* CoreLocation.framework */,
+				0A32C13F1ABE597900025127 /* MobileCoreServices.framework */,
+				0A32C1401ABE597900025127 /* QuartzCore.framework */,
+				0A32C1411ABE597900025127 /* Security.framework */,
+				0A32C1421ABE597900025127 /* Social.framework */,
+				0A32C1431ABE597900025127 /* StoreKit.framework */,
+				0A32C1441ABE597900025127 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
