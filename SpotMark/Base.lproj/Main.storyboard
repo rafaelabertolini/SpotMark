@@ -113,7 +113,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MtJ-A3-COk">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="W90-LX-qdV">
+                        <barButtonItem key="rightBarButtonItem" image="Plus" id="W90-LX-qdV">
                             <connections>
                                 <action selector="creator:" destination="iQs-oE-owL" id="mLN-0F-Z88"/>
                                 <segue destination="6gQ-Q7-tbB" kind="show" identifier="gotoCreator" id="07s-Np-hEV"/>
@@ -201,7 +201,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BWt-wF-wfO">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="HAc-YK-GD8">
+                        <barButtonItem key="rightBarButtonItem" image="Plus" id="HAc-YK-GD8">
                             <connections>
                                 <action selector="creator:" destination="8kq-VU-38O" id="DaY-ro-esN"/>
                                 <segue destination="6gQ-Q7-tbB" kind="show" identifier="gotoCreator" id="TZB-Lm-RUj"/>
@@ -247,7 +247,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uOh-oe-pa0">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Kas-Ph-Iu0">
+                        <barButtonItem key="rightBarButtonItem" image="Plus" id="Kas-Ph-Iu0">
                             <connections>
                                 <action selector="Creator:" destination="ZHJ-d2-rMF" id="j00-TD-LT5"/>
                                 <segue destination="6gQ-Q7-tbB" kind="show" identifier="gotoCreator" id="Kvc-Bv-HLe"/>
@@ -354,11 +354,12 @@
         <image name="Events" width="26" height="32"/>
         <image name="Image" width="749" height="1334"/>
         <image name="Messages" width="30" height="27"/>
+        <image name="Plus" width="24" height="24"/>
         <image name="Settings" width="32" height="32"/>
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kvc-Bv-HLe"/>
+        <segue reference="07s-Np-hEV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
