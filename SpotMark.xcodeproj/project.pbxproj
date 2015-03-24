@@ -33,7 +33,10 @@
 		0A32C2921AC08FEB00025127 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */; };
 		0A32C2941AC08FEB00025127 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C2901AC08FEB00025127 /* ParseFacebookUtils.framework */; };
 		0A32C2951AC0901E00025127 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C28F1AC08FEB00025127 /* Parse.framework */; };
-		955619541AC099B800010C68 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619531AC099B800010C68 /* EventsViewController.m */; };
+		F22735EF1AC1C95300F10D3D /* NewEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22735EE1AC1C95300F10D3D /* NewEventsViewController.m */; };
+		F22735F21AC1D2CB00F10D3D /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22735F11AC1D2CB00F10D3D /* EventsViewController.m */; };
+		F22735F51AC1D4C300F10D3D /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22735F41AC1D4C300F10D3D /* MessagesViewController.m */; };
+		F22735F81AC1D4EF00F10D3D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22735F71AC1D4EF00F10D3D /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,8 +85,14 @@
 		0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		0A32C28F1AC08FEB00025127 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		0A32C2901AC08FEB00025127 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		955619521AC099B800010C68 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsViewController.h; path = ../EventsViewController.h; sourceTree = "<group>"; };
-		955619531AC099B800010C68 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsViewController.m; path = ../EventsViewController.m; sourceTree = "<group>"; };
+		F22735ED1AC1C95300F10D3D /* NewEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewEventsViewController.h; path = ../../SpotMarkAntigo/SpotMark/NewEventsViewController.h; sourceTree = "<group>"; };
+		F22735EE1AC1C95300F10D3D /* NewEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewEventsViewController.m; path = ../../SpotMarkAntigo/SpotMark/NewEventsViewController.m; sourceTree = "<group>"; };
+		F22735F01AC1D2CB00F10D3D /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsViewController.h; path = ../../SpotMarkAntigo/SpotMark/EventsViewController.h; sourceTree = "<group>"; };
+		F22735F11AC1D2CB00F10D3D /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsViewController.m; path = ../../SpotMarkAntigo/SpotMark/EventsViewController.m; sourceTree = "<group>"; };
+		F22735F31AC1D4C300F10D3D /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessagesViewController.h; path = ../../SpotMarkAntigo/SpotMark/MessagesViewController.h; sourceTree = "<group>"; };
+		F22735F41AC1D4C300F10D3D /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessagesViewController.m; path = ../../SpotMarkAntigo/SpotMark/MessagesViewController.m; sourceTree = "<group>"; };
+		F22735F61AC1D4EF00F10D3D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = ../../SpotMarkAntigo/SpotMark/SettingsViewController.h; sourceTree = "<group>"; };
+		F22735F71AC1D4EF00F10D3D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = ../../SpotMarkAntigo/SpotMark/SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,9 +157,15 @@
 				0A32BF131ABE039E00025127 /* AppDelegate.m */,
 				0A32BF151ABE039E00025127 /* ViewController.h */,
 				0A32BF161ABE039E00025127 /* ViewController.m */,
-				955619521AC099B800010C68 /* EventsViewController.h */,
-				955619531AC099B800010C68 /* EventsViewController.m */,
+				F22735F01AC1D2CB00F10D3D /* EventsViewController.h */,
+				F22735F11AC1D2CB00F10D3D /* EventsViewController.m */,
 				0A32BF181ABE039E00025127 /* Main.storyboard */,
+				F22735F61AC1D4EF00F10D3D /* SettingsViewController.h */,
+				F22735F71AC1D4EF00F10D3D /* SettingsViewController.m */,
+				F22735F31AC1D4C300F10D3D /* MessagesViewController.h */,
+				F22735F41AC1D4C300F10D3D /* MessagesViewController.m */,
+				F22735ED1AC1C95300F10D3D /* NewEventsViewController.h */,
+				F22735EE1AC1C95300F10D3D /* NewEventsViewController.m */,
 				0A32BF1B1ABE039E00025127 /* Images.xcassets */,
 				0A32BF1D1ABE039E00025127 /* LaunchScreen.xib */,
 				0A32BF0E1ABE039E00025127 /* Supporting Files */,
@@ -322,8 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22735EF1AC1C95300F10D3D /* NewEventsViewController.m in Sources */,
 				0A32C1701ABF24A800025127 /* Chat.m in Sources */,
+				F22735F51AC1D4C300F10D3D /* MessagesViewController.m in Sources */,
+				F22735F81AC1D4EF00F10D3D /* SettingsViewController.m in Sources */,
 				0A32C16F1ABF24A800025127 /* Invites.m in Sources */,
+				F22735F21AC1D2CB00F10D3D /* EventsViewController.m in Sources */,
 				0A32BF171ABE039E00025127 /* ViewController.m in Sources */,
 				0A32BF141ABE039E00025127 /* AppDelegate.m in Sources */,
 				0A32BF111ABE039E00025127 /* main.m in Sources */,

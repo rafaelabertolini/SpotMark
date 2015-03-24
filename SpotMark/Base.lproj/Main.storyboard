@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="905" y="-317"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="c8r-9U-vTc">
             <objects>
-                <viewController id="iQs-oE-owL" sceneMemberID="viewController">
+                <viewController id="iQs-oE-owL" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7FP-wJ-Xn6"/>
                         <viewControllerLayoutGuide type="bottom" id="1N3-Sy-E1T"/>
@@ -113,7 +113,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MtJ-A3-COk">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="W90-LX-qdV"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="W90-LX-qdV">
+                            <connections>
+                                <action selector="creator:" destination="iQs-oE-owL" id="mLN-0F-Z88"/>
+                                <segue destination="6gQ-Q7-tbB" kind="show" identifier="gotoCreator" id="07s-Np-hEV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvi-nG-UFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -171,10 +176,10 @@
             </objects>
             <point key="canvasLocation" x="264" y="1117"/>
         </scene>
-        <!--View Controller-->
+        <!--Messages View Controller-->
         <scene sceneID="vQr-id-iGg">
             <objects>
-                <viewController id="8kq-VU-38O" sceneMemberID="viewController">
+                <viewController id="8kq-VU-38O" customClass="MessagesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p33-Ta-Vs0"/>
                         <viewControllerLayoutGuide type="bottom" id="PGc-P8-tfl"/>
@@ -196,7 +201,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BWt-wF-wfO">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="HAc-YK-GD8"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="HAc-YK-GD8">
+                            <connections>
+                                <action selector="creator:" destination="8kq-VU-38O" id="DaY-ro-esN"/>
+                                <segue destination="6gQ-Q7-tbB" kind="show" identifier="gotoCreator" id="TZB-Lm-RUj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQ0-ia-5Yn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -251,23 +261,46 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1Ur-AW-9L7" firstAttribute="top" secondItem="QKo-KT-Bzk" secondAttribute="bottom" id="7K2-7z-iqk"/>
                             <constraint firstAttribute="trailing" secondItem="FY6-gW-cfP" secondAttribute="trailing" id="LYL-Ev-NX3"/>
-                            <constraint firstItem="yIW-Fy-Pk0" firstAttribute="top" secondItem="1Ur-AW-9L7" secondAttribute="bottom" id="MED-ag-bkw"/>
                             <constraint firstItem="FY6-gW-cfP" firstAttribute="leading" secondItem="Aoq-ux-YAe" secondAttribute="leading" id="QBt-fZ-ULP"/>
+                            <constraint firstItem="1Ur-AW-9L7" firstAttribute="top" secondItem="QKo-KT-Bzk" secondAttribute="bottom" id="Usa-RD-C6P"/>
                             <constraint firstAttribute="bottom" secondItem="FY6-gW-cfP" secondAttribute="bottom" id="W8C-li-Wbx"/>
                             <constraint firstItem="1Ur-AW-9L7" firstAttribute="leading" secondItem="Aoq-ux-YAe" secondAttribute="leading" id="ZqW-kN-LwK"/>
                             <constraint firstItem="FY6-gW-cfP" firstAttribute="top" secondItem="Aoq-ux-YAe" secondAttribute="top" id="fNn-UM-0h2"/>
+                            <constraint firstItem="yIW-Fy-Pk0" firstAttribute="top" secondItem="1Ur-AW-9L7" secondAttribute="bottom" id="idp-Su-1lL"/>
                             <constraint firstAttribute="trailing" secondItem="1Ur-AW-9L7" secondAttribute="trailing" id="xL7-N5-Kfu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uOh-oe-pa0">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Kas-Ph-Iu0"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Kas-Ph-Iu0">
+                            <connections>
+                                <action selector="Creator:" destination="ZHJ-d2-rMF" id="j00-TD-LT5"/>
+                                <segue destination="6gQ-Q7-tbB" kind="show" identifier="gotoCreator" id="Kvc-Bv-HLe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhF-4Q-K9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="913" y="1825"/>
+        </scene>
+        <!--New Events View Controller-->
+        <scene sceneID="dvN-sj-Nki">
+            <objects>
+                <viewController id="6gQ-Q7-tbB" customClass="NewEventsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3HI-zm-aXd"/>
+                        <viewControllerLayoutGuide type="bottom" id="puK-66-44e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oFE-dw-ZS4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNc-8N-NY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="2559"/>
         </scene>
     </scenes>
     <resources>
@@ -277,5 +310,8 @@
         <image name="Settings" width="32" height="32"/>
         <image name="SpotMark" width="706" height="203"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="TZB-Lm-RUj"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
