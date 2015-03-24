@@ -81,6 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="loginButtom" destination="IpQ-dY-9dO" id="0OP-yU-q0s"/>
+                        <segue destination="AmP-8o-NdA" kind="show" identifier="gotoEvents" id="CgA-yG-iLN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

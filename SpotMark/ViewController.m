@@ -36,17 +36,18 @@
     if (FBSession.activeSession.isOpen)
     {
         NSLog(@"ss");
+        [self performSegueWithIdentifier:@"gotoEvents" sender: nil];
         
-        [FBRequestConnection startForPostStatusUpdate:@"Sample Text" completionHandler:^(FBRequestConnection * connection , id result , NSError * error){
-            if (!error)
-            {
-                NSLog(@"Posted success fully");
-            }
-            else
-            {
-                NSLog(@"Error %@",error);
-            }
-        }];
+//        [FBRequestConnection startForPostStatusUpdate:@"Sample Text" completionHandler:^(FBRequestConnection * connection , id result , NSError * error){
+//            if (!error)
+//            {
+//                NSLog(@"Posted success fully");
+//            }
+//            else
+//            {
+//                NSLog(@"Error %@",error);
+//            }
+//        }];
     }
 //    else
 //    {
@@ -55,6 +56,17 @@
 //        NSLog(@"Need to login");
 //    }
 
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"gotoDetailsView"])
+    {
+        //NSIndexPath *idx = [_tableView indexPathForCell:(UITableViewCell *)sender];
+//        NSIndexPath *idx = (NSIndexPath *)sender;
+        
+    }
 }
 
 
