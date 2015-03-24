@@ -99,11 +99,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="xeA-oc-8Hd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="xeA-oc-8Hd">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xeA-oc-8Hd" firstAttribute="top" secondItem="RP2-cG-5he" secondAttribute="top" id="G5u-Xa-WlA"/>
+                            <constraint firstItem="xeA-oc-8Hd" firstAttribute="leading" secondItem="RP2-cG-5he" secondAttribute="leading" id="Pk1-M6-t9S"/>
+                            <constraint firstAttribute="bottom" secondItem="xeA-oc-8Hd" secondAttribute="bottom" id="et2-e6-gLI"/>
+                            <constraint firstAttribute="trailing" secondItem="xeA-oc-8Hd" secondAttribute="trailing" id="zhW-pd-azp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MtJ-A3-COk"/>
                 </viewController>
@@ -174,11 +180,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="jad-YL-lZN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="jad-YL-lZN">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jad-YL-lZN" secondAttribute="trailing" id="5YK-Z8-gx4"/>
+                            <constraint firstAttribute="bottom" secondItem="jad-YL-lZN" secondAttribute="bottom" id="SGl-gX-Bea"/>
+                            <constraint firstItem="jad-YL-lZN" firstAttribute="leading" secondItem="iq0-T4-fYr" secondAttribute="leading" id="XXZ-Vs-tmZ"/>
+                            <constraint firstItem="jad-YL-lZN" firstAttribute="top" secondItem="iq0-T4-fYr" secondAttribute="top" id="ppt-5l-2P4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BWt-wF-wfO"/>
                 </viewController>
@@ -198,8 +210,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="FY6-gW-cfP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="FY6-gW-cfP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FY6-gW-cfP" secondAttribute="height" multiplier="1:1" id="rXt-6n-j1V"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="rXt-6n-j1V"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1Ur-AW-9L7">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
@@ -227,8 +247,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1Ur-AW-9L7" firstAttribute="top" secondItem="QKo-KT-Bzk" secondAttribute="bottom" id="7K2-7z-iqk"/>
+                            <constraint firstAttribute="trailing" secondItem="FY6-gW-cfP" secondAttribute="trailing" id="LYL-Ev-NX3"/>
                             <constraint firstItem="yIW-Fy-Pk0" firstAttribute="top" secondItem="1Ur-AW-9L7" secondAttribute="bottom" id="MED-ag-bkw"/>
+                            <constraint firstItem="FY6-gW-cfP" firstAttribute="leading" secondItem="Aoq-ux-YAe" secondAttribute="leading" id="QBt-fZ-ULP"/>
+                            <constraint firstAttribute="bottom" secondItem="FY6-gW-cfP" secondAttribute="bottom" id="W8C-li-Wbx"/>
                             <constraint firstItem="1Ur-AW-9L7" firstAttribute="leading" secondItem="Aoq-ux-YAe" secondAttribute="leading" id="ZqW-kN-LwK"/>
+                            <constraint firstItem="FY6-gW-cfP" firstAttribute="top" secondItem="Aoq-ux-YAe" secondAttribute="top" id="fNn-UM-0h2"/>
                             <constraint firstAttribute="trailing" secondItem="1Ur-AW-9L7" secondAttribute="trailing" id="xL7-N5-Kfu"/>
                         </constraints>
                     </view>
