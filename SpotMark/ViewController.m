@@ -19,8 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    FBLoginView *loginView = [[FBLoginView alloc] init];
-
+    self.loginView = [[FBLoginView alloc] initWithPermissions:@[@"public_profile", @"email", @"user_friends"]];
+    self.loginView.delegate = self;
+    
+    
 //    if (![PFFacebookUtils isLinkedWithUser:user]) {
 //        [PFFacebookUtils linkUser:user permissions:nil block:^(BOOL succeeded, NSError *error) {
 //            if (succeeded) {
@@ -28,6 +30,54 @@
 //            }
 //        }];
 //    }
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    if (FBSession.activeSession.isOpen)
+    {
+        NSLog(@"ss");
+        [self performSegueWithIdentifier:@"gotoEvents" sender: nil];
+        
+//        [FBRequestConnection startForPostStatusUpdate:@"Sample Text" completionHandler:^(FBRequestConnection * connection , id result , NSError * error){
+//            if (!error)
+//            {
+//                NSLog(@"Posted success fully");
+//            }
+//            else
+//            {
+//                NSLog(@"Error %@",error);
+//            }
+//        }];
+    }
+//    else
+//    {
+//        NSArray *permissions = [NSArray arrayWithObjects:@"publish_actions", @"publish_stream", nil];
+//        
+//        NSLog(@"Need to login");
+//    }
+
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"gotoDetailsView"])
+    {
+        //NSIndexPath *idx = [_tableView indexPathForCell:(UITableViewCell *)sender];
+//        NSIndexPath *idx = (NSIndexPath *)sender;
+        
+    }
+}
+
+
+- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
+                            user:(id<FBGraphUser>)user{
+    NSLog(@"sss");
+}
+
+
+-(void) loginView:(FBLoginView *)loginView handleError:(NSError *)error{
+    NSLog(@"ddsdasdasd");
 }
 
 - (void)didReceiveMemoryWarning {
