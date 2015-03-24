@@ -33,6 +33,7 @@
 		0A32C2941AC08FEB00025127 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C2901AC08FEB00025127 /* ParseFacebookUtils.framework */; };
 		0A32C2951AC0901E00025127 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C28F1AC08FEB00025127 /* Parse.framework */; };
 		0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */; };
+		0A32C29E1AC1F35300025127 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C29D1AC1F35300025127 /* Event.m */; };
 		9556195E1AC1B69100010C68 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9556195D1AC1B69100010C68 /* EventsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -75,13 +76,14 @@
 		0A32C1511ABE598F00025127 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0A32C16A1ABF24A800025127 /* Invites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invites.h; sourceTree = "<group>"; };
 		0A32C16B1ABF24A800025127 /* Invites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invites.m; sourceTree = "<group>"; };
-		0A32C1711ABF24E400025127 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		0A32C28D1AC08FEB00025127 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		0A32C28F1AC08FEB00025127 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		0A32C2901AC08FEB00025127 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		0A32C2991AC1ED8500025127 /* NewEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEventsViewController.h; sourceTree = "<group>"; };
 		0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEventsViewController.m; sourceTree = "<group>"; };
+		0A32C29C1AC1F35300025127 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../Event.h; sourceTree = "<group>"; };
+		0A32C29D1AC1F35300025127 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = ../Event.m; sourceTree = "<group>"; };
 		9556195C1AC1B69100010C68 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsViewController.h; path = ../EventsViewController.h; sourceTree = "<group>"; };
 		9556195D1AC1B69100010C68 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsViewController.m; path = ../EventsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,9 +152,9 @@
 				0A32BF161ABE039E00025127 /* ViewController.m */,
 				9556195C1AC1B69100010C68 /* EventsViewController.h */,
 				9556195D1AC1B69100010C68 /* EventsViewController.m */,
-				0A32BF181ABE039E00025127 /* Main.storyboard */,
 				0A32C2991AC1ED8500025127 /* NewEventsViewController.h */,
 				0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */,
+				0A32BF181ABE039E00025127 /* Main.storyboard */,
 				0A32BF1B1ABE039E00025127 /* Images.xcassets */,
 				0A32BF1D1ABE039E00025127 /* LaunchScreen.xib */,
 				0A32BF0E1ABE039E00025127 /* Supporting Files */,
@@ -189,7 +191,8 @@
 		0A32C1681ABF248F00025127 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0A32C1711ABF24E400025127 /* Event.h */,
+				0A32C29C1AC1F35300025127 /* Event.h */,
+				0A32C29D1AC1F35300025127 /* Event.m */,
 				0A32C16A1ABF24A800025127 /* Invites.h */,
 				0A32C16B1ABF24A800025127 /* Invites.m */,
 			);
@@ -328,6 +331,7 @@
 				0A32BF171ABE039E00025127 /* ViewController.m in Sources */,
 				0A32BF141ABE039E00025127 /* AppDelegate.m in Sources */,
 				0A32BF111ABE039E00025127 /* main.m in Sources */,
+				0A32C29E1AC1F35300025127 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

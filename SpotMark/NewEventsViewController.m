@@ -6,9 +6,13 @@
 //  Copyright (c) 2015 Lucas Fraga Schuler. All rights reserved.
 //
 
+#import "Event.h"
 #import "NewEventsViewController.h"
 
 @interface NewEventsViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *txtName;
+@property (weak, nonatomic) IBOutlet UITextField *txtDescription;
+@property (weak, nonatomic) IBOutlet UITextField *txtLocalization;
 
 @end
 
@@ -24,6 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)create:(id)sender {
+    Event *e = [[Event alloc] init];
 }
 
 - (BOOL) hidesBottomBarWhenPushed{

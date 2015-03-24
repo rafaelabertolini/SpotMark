@@ -337,6 +337,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="txtDescription" destination="YvY-2D-Lpd" id="Ieg-Yp-fee"/>
+                        <outlet property="txtLocalization" destination="KOL-60-v1g" id="Tae-KC-vJs"/>
+                        <outlet property="txtName" destination="7Rj-BD-gFf" id="aSL-Yg-6FX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNc-8N-NY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
