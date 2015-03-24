@@ -2,7 +2,7 @@
 //  EventsViewController.h
 //  SpotMark
 //
-//  Created by Rafaela dos Santos Bertolini on 23/03/15.
+//  Created by Rafaela dos Santos Bertolini on 19/02/15.
 //  Copyright (c) 2015 Lucas Fraga Schuler. All rights reserved.
 //
 
