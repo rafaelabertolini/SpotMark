@@ -112,7 +112,9 @@
                             <constraint firstAttribute="trailing" secondItem="xeA-oc-8Hd" secondAttribute="trailing" id="zhW-pd-azp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MtJ-A3-COk"/>
+                    <navigationItem key="navigationItem" id="MtJ-A3-COk">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="W90-LX-qdV"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvi-nG-UFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,7 +195,9 @@
                             <constraint firstItem="jad-YL-lZN" firstAttribute="top" secondItem="iq0-T4-fYr" secondAttribute="top" id="ppt-5l-2P4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BWt-wF-wfO"/>
+                    <navigationItem key="navigationItem" id="BWt-wF-wfO">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="HAc-YK-GD8"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQ0-ia-5Yn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,7 +261,9 @@
                             <constraint firstAttribute="trailing" secondItem="1Ur-AW-9L7" secondAttribute="trailing" id="xL7-N5-Kfu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uOh-oe-pa0"/>
+                    <navigationItem key="navigationItem" id="uOh-oe-pa0">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Kas-Ph-Iu0"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhF-4Q-K9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
