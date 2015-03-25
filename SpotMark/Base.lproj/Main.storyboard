@@ -313,7 +313,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-UR-Zkg">
-                                <rect key="frame" x="0.0" y="501.5" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="502" width="600" height="50"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="27"/>
                                 <state key="normal" title="Create">
@@ -372,11 +372,7 @@
                         </variation>
                     </view>
                     <connections>
-<<<<<<< HEAD
-                        <outlet property="datePicker" destination="Ttw-BL-lOo" id="uh8-VQ-PcZ"/>
-=======
                         <outlet property="dpdate" destination="Ttw-BL-lOo" id="Kwx-w7-bzL"/>
->>>>>>> c1e8c67f8659edca5e0120cbe44767f1e1ee5e4b
                         <outlet property="txtDescription" destination="YvY-2D-Lpd" id="Ieg-Yp-fee"/>
                         <outlet property="txtLocalization" destination="KOL-60-v1g" id="Tae-KC-vJs"/>
                         <outlet property="txtName" destination="7Rj-BD-gFf" id="aSL-Yg-6FX"/>

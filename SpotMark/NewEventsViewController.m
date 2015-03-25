@@ -13,11 +13,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UITextField *txtDescription;
 @property (weak, nonatomic) IBOutlet UITextField *txtLocalization;
-<<<<<<< HEAD
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
-=======
 @property (weak, nonatomic) IBOutlet UIDatePicker *dpdate;
->>>>>>> c1e8c67f8659edca5e0120cbe44767f1e1ee5e4b
+
 
 @end
 
