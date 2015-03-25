@@ -372,7 +372,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="dpdate" destination="Ttw-BL-lOo" id="Kwx-w7-bzL"/>
+                        <outlet property="datePicker" destination="Ttw-BL-lOo" id="uh8-VQ-PcZ"/>
                         <outlet property="txtDescription" destination="YvY-2D-Lpd" id="Ieg-Yp-fee"/>
                         <outlet property="txtLocalization" destination="KOL-60-v1g" id="Tae-KC-vJs"/>
                         <outlet property="txtName" destination="7Rj-BD-gFf" id="aSL-Yg-6FX"/>

@@ -13,8 +13,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UITextField *txtDescription;
 @property (weak, nonatomic) IBOutlet UITextField *txtLocalization;
+
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
-@property (weak, nonatomic) IBOutlet UIDatePicker *dpdate;
 
 
 @end
@@ -43,11 +43,13 @@
     e.name = _txtName.text;
     e.desc = _txtDescription.text;
     e.local = _txtLocalization.text;
-    e.date = _dpdate.date;
+    e.date = _datePicker.date;
     [dateFormat setDateFormat:@"d/M/YYYY"];
-    e.date = [dateFormat stringFromDate:_dpdate.date];
+    e.date = [dateFormat stringFromDate:_datePicker.date];
     [dateFormat setDateFormat:@"hh:mm"];
-    e.time = [dateFormat stringFromDate:_dpdate.date];
+    e.time = [dateFormat stringFromDate:_datePicker.date];
+    
+    NSLog(@"%@",e.time);
 }
 
 - (BOOL) hidesBottomBarWhenPushed{
