@@ -7,7 +7,10 @@
 //
 
 #import "EventsViewController.h"
+#import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
+#import "LoadParse.h"
+#import "Event.h"
 
 @interface EventsViewController ()
 
@@ -29,10 +32,14 @@
     _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     _tableView.rowHeight = 100;
     _tableView.backgroundColor = [UIColor clearColor];
-
     
-   // PFQuery *query = [PFQuery]
-    
+    LoadParse *ld = [[LoadParse alloc] init];
+    NSMutableArray *array = [ld loadEvents];
+    NSLog(@"%lu",array.count);
+    for(int i=0; i<array.count;i++){
+        Event *e = [array objectAtIndex:i];
+        NSLog(@"%@",e);
+    }
 }
 
 - (void)didReceiveMemoryWarning {
