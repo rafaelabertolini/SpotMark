@@ -211,10 +211,36 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="vnJ-lx-YrF" kind="show" id="gPy-Uq-59d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQ0-ia-5Yn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="1825"/>
+            <point key="canvasLocation" x="250" y="1825"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="90p-7u-SaB">
+            <objects>
+                <viewController id="vnJ-lx-YrF" customClass="ChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rZk-M0-qV0"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Bn-4G-RMv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lxt-a4-uYn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="6uq-nz-kbJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Q4-Kd-JQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-67" y="2573"/>
         </scene>
         <!--Events-->
         <scene sceneID="DkY-VG-O83">
@@ -259,11 +285,35 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="6np-hX-Xxe" id="duu-J7-6xh"/>
+                        <segue destination="a7T-MV-DoO" kind="show" id="HFn-Re-Rbh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhF-4Q-K9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="913" y="1825"/>
+        </scene>
+        <!--One Event View Controller-->
+        <scene sceneID="32E-25-4dL">
+            <objects>
+                <viewController id="a7T-MV-DoO" customClass="OneEventViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DAr-Eb-7z4"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Km-tS-Te3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LWL-tq-evF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="PgT-Sb-MEL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZj-KZ-1Q1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="2573"/>
         </scene>
         <!--New Events View Controller-->
         <scene sceneID="dvN-sj-Nki">
@@ -380,7 +430,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNc-8N-NY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="2547"/>
+            <point key="canvasLocation" x="1223" y="2573"/>
         </scene>
     </scenes>
     <resources>
@@ -392,7 +442,7 @@
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TZB-Lm-RUj"/>
+        <segue reference="Kvc-Bv-HLe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -35,6 +35,10 @@
 		0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */; };
 		0A32C29E1AC1F35300025127 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C29D1AC1F35300025127 /* Event.m */; };
 		9556195E1AC1B69100010C68 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9556195D1AC1B69100010C68 /* EventsViewController.m */; };
+		955619611AC320DF00010C68 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619601AC320DF00010C68 /* SettingsViewController.m */; };
+		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
+		955619671AC3228F00010C68 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619661AC3228F00010C68 /* ChatViewController.m */; };
+		9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619691AC3229D00010C68 /* OneEventViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,14 @@
 		0A32C29D1AC1F35300025127 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = ../Event.m; sourceTree = "<group>"; };
 		9556195C1AC1B69100010C68 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsViewController.h; path = ../EventsViewController.h; sourceTree = "<group>"; };
 		9556195D1AC1B69100010C68 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsViewController.m; path = ../EventsViewController.m; sourceTree = "<group>"; };
+		9556195F1AC320DF00010C68 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		955619601AC320DF00010C68 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		955619621AC3215400010C68 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		955619631AC3215400010C68 /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
+		955619651AC3228F00010C68 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		955619661AC3228F00010C68 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		955619681AC3229D00010C68 /* OneEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneEventViewController.h; sourceTree = "<group>"; };
+		955619691AC3229D00010C68 /* OneEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneEventViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +166,14 @@
 				9556195D1AC1B69100010C68 /* EventsViewController.m */,
 				0A32C2991AC1ED8500025127 /* NewEventsViewController.h */,
 				0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */,
+				955619681AC3229D00010C68 /* OneEventViewController.h */,
+				955619691AC3229D00010C68 /* OneEventViewController.m */,
+				9556195F1AC320DF00010C68 /* SettingsViewController.h */,
+				955619601AC320DF00010C68 /* SettingsViewController.m */,
+				955619621AC3215400010C68 /* MessagesViewController.h */,
+				955619631AC3215400010C68 /* MessagesViewController.m */,
+				955619651AC3228F00010C68 /* ChatViewController.h */,
+				955619661AC3228F00010C68 /* ChatViewController.m */,
 				0A32BF181ABE039E00025127 /* Main.storyboard */,
 				0A32BF1B1ABE039E00025127 /* Images.xcassets */,
 				0A32BF1D1ABE039E00025127 /* LaunchScreen.xib */,
@@ -327,7 +347,11 @@
 			files = (
 				0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */,
 				0A32C16F1ABF24A800025127 /* Invites.m in Sources */,
+				955619671AC3228F00010C68 /* ChatViewController.m in Sources */,
+				9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */,
+				955619641AC3215400010C68 /* MessagesViewController.m in Sources */,
 				9556195E1AC1B69100010C68 /* EventsViewController.m in Sources */,
+				955619611AC320DF00010C68 /* SettingsViewController.m in Sources */,
 				0A32BF171ABE039E00025127 /* ViewController.m in Sources */,
 				0A32BF141ABE039E00025127 /* AppDelegate.m in Sources */,
 				0A32BF111ABE039E00025127 /* main.m in Sources */,
