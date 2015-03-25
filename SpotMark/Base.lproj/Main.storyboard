@@ -57,6 +57,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IpQ-dY-9dO" secondAttribute="height" multiplier="600:91" id="xfI-9J-bzn"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KMz-MX-wFo"/>
+                                </connections>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpotMark" translatesAutoresizingMaskIntoConstraints="NO" id="yLx-R7-jrE">
                                 <rect key="frame" x="25" y="99" width="551" height="198"/>
@@ -80,7 +83,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButtom" destination="IpQ-dY-9dO" id="0OP-yU-q0s"/>
+                        <outlet property="loginView" destination="IpQ-dY-9dO" id="d8J-oz-edN"/>
                         <segue destination="AmP-8o-NdA" kind="show" identifier="gotoEvents" id="CgA-yG-iLN"/>
                     </connections>
                 </viewController>

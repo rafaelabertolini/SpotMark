@@ -7,10 +7,7 @@
 //
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> ec0fa5f2a4f0869cc4a76022fb08f903e335246b
 #import <UIKit/UIKit.h>
 
 @interface NewEventsViewController : UIViewController

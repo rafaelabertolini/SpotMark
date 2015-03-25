@@ -20,48 +20,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    FBLoginView *loginView = [[FBLoginView alloc] init];
-    loginView.readPermissions =    @[@"email", @"public_profile"];
-    loginView.delegate = self;
+    self.loginView.readPermissions = @[@"public_profile", @"email", @"user_friends"];
 }
 
-
--(void)viewDidAppear:(BOOL)animated{
-//    if (FBSession.activeSession.isOpen)
-//    {
-//    [[FBRequest requestForMe] startWithCompletionHandler:
-//      ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
-//          if (!error) {
-//             // NSLog(@"%@",[user objectForKey:@"email"]);
-//             // NSLog(@"%@",user);
-//              
-//          } else {
-//              NSLog(@"error: %@", error);
-//          }
-//      }];
-       [self performSegueWithIdentifier:@"gotoEvents" sender: nil];
-//    }
-
-}
-
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"gotoEvents"])
-    {
-        //TODO
+-(void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
+    if (FBSession.activeSession.isOpen) {
+        NSLog(@"passou aqui");        
+        [self performSegueWithIdentifier:@"gotoEvents" sender:nil];
     }
 }
 
+//-(void) loginViewShowingLoggedInUser:(FBLoginView *)loginView{
+//    NSLog(@"you are logged in! :)");
+//    [self performSegueWithIdentifier:@"gotoEvents" sender:nil];
+//}
 
--(void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
-    NSLog(@"%@",user.id);
-    NSLog(@"%@",[user objectForKey:@"email"]);
-}
-
-
--(void) loginView:(FBLoginView *)loginView handleError:(NSError *)error{
-    NSLog(@"loginview");
+-(void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView{
+    NSLog(@"you are logged out! :(");
 }
 
 - (void)didReceiveMemoryWarning {

@@ -39,8 +39,6 @@
     e.date = [dateFormat stringFromDate:_dpdate.date];
     [dateFormat setDateFormat:@"hh:mm"];
     e.time = [dateFormat stringFromDate:_dpdate.date];
-    
-    NSLog(@"%@",e.time);
 }
 
 - (BOOL) hidesBottomBarWhenPushed{
