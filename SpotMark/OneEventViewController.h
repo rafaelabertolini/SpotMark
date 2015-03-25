@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Event.h"
+
 
 @interface OneEventViewController : UIViewController
+
+@property Event *evt;
 
 @end
