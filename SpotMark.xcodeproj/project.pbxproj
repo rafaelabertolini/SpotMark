@@ -39,7 +39,7 @@
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		955619671AC3228F00010C68 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619661AC3228F00010C68 /* ChatViewController.m */; };
 		9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619691AC3229D00010C68 /* OneEventViewController.m */; };
-		9556196C1AC32B2C00010C68 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9556196B1AC32B2C00010C68 /* MapKit.framework */; };
+		F227361F1AC3247900F10D3D /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = F227361E1AC3247900F10D3D /* Chat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +99,8 @@
 		955619661AC3228F00010C68 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		955619681AC3229D00010C68 /* OneEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneEventViewController.h; sourceTree = "<group>"; };
 		955619691AC3229D00010C68 /* OneEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneEventViewController.m; sourceTree = "<group>"; };
-		9556196B1AC32B2C00010C68 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F227361D1AC3247900F10D3D /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chat.h; path = ../../SpotMarkAntigo/SpotMark/Chat.h; sourceTree = "<group>"; };
+		F227361E1AC3247900F10D3D /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Chat.m; path = ../../SpotMarkAntigo/SpotMark/Chat.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +215,8 @@
 		0A32C1681ABF248F00025127 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F227361D1AC3247900F10D3D /* Chat.h */,
+				F227361E1AC3247900F10D3D /* Chat.m */,
 				0A32C29C1AC1F35300025127 /* Event.h */,
 				0A32C29D1AC1F35300025127 /* Event.m */,
 				0A32C16A1ABF24A800025127 /* Invites.h */,
@@ -350,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */,
+				F227361F1AC3247900F10D3D /* Chat.m in Sources */,
 				0A32C16F1ABF24A800025127 /* Invites.m in Sources */,
 				955619671AC3228F00010C68 /* ChatViewController.m in Sources */,
 				9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */,

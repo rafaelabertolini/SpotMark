@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @end
-
+//
 @implementation NewEventsViewController
 
 - (void)viewDidLoad {
@@ -34,7 +34,7 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = @"New Event";
 }
-
+//
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
