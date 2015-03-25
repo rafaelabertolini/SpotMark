@@ -194,17 +194,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="jad-YL-lZN">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JHe-eA-Cig">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JHe-eA-Cig">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="jad-YL-lZN" secondAttribute="trailing" id="5YK-Z8-gx4"/>
-                            <constraint firstAttribute="bottom" secondItem="jad-YL-lZN" secondAttribute="bottom" id="SGl-gX-Bea"/>
-                            <constraint firstItem="jad-YL-lZN" firstAttribute="leading" secondItem="iq0-T4-fYr" secondAttribute="leading" id="XXZ-Vs-tmZ"/>
-                            <constraint firstItem="jad-YL-lZN" firstAttribute="top" secondItem="iq0-T4-fYr" secondAttribute="top" id="ppt-5l-2P4"/>
+                            <constraint firstItem="JHe-eA-Cig" firstAttribute="leading" secondItem="iq0-T4-fYr" secondAttribute="leading" id="5lD-Pe-rDv"/>
+                            <constraint firstItem="JHe-eA-Cig" firstAttribute="top" secondItem="p33-Ta-Vs0" secondAttribute="bottom" id="Hui-oF-PjB"/>
+                            <constraint firstItem="PGc-P8-tfl" firstAttribute="top" secondItem="JHe-eA-Cig" secondAttribute="bottom" id="Umb-8D-K9k"/>
+                            <constraint firstItem="jad-YL-lZN" firstAttribute="top" secondItem="iq0-T4-fYr" secondAttribute="top" id="WAA-Sb-L0l"/>
+                            <constraint firstAttribute="bottom" secondItem="jad-YL-lZN" secondAttribute="bottom" id="WJl-3E-Fug"/>
+                            <constraint firstAttribute="trailing" secondItem="JHe-eA-Cig" secondAttribute="trailing" id="ZYl-po-6gR"/>
+                            <constraint firstAttribute="trailing" secondItem="jad-YL-lZN" secondAttribute="trailing" id="gFW-Py-gK9"/>
+                            <constraint firstItem="jad-YL-lZN" firstAttribute="leading" secondItem="iq0-T4-fYr" secondAttribute="leading" id="vE7-T5-45s"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Messages" id="BWt-wF-wfO">
@@ -216,6 +220,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableViewM" destination="JHe-eA-Cig" id="cSB-lO-CS7"/>
                         <segue destination="vnJ-lx-YrF" kind="show" id="gPy-Uq-59d"/>
                     </connections>
                 </viewController>
@@ -312,7 +317,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-uS-JQp">
-                                <rect key="frame" x="0.0" y="266" width="600" height="128"/>
+                                <rect key="frame" x="0.0" y="391" width="600" height="160"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -456,8 +461,8 @@
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kvc-Bv-HLe"/>
         <segue reference="HFn-Re-Rbh"/>
+        <segue reference="TZB-Lm-RUj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
