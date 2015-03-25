@@ -311,14 +311,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="PgT-Sb-MEL">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-uS-JQp">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-uS-JQp">
                                 <rect key="frame" x="0.0" y="266" width="600" height="128"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="dpY-uS-JQp" id="4nv-aL-D81"/>
+                        <outlet property="mapView" destination="dpY-uS-JQp" id="t5h-0O-XXI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZj-KZ-1Q1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -457,6 +457,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Kvc-Bv-HLe"/>
+        <segue reference="HFn-Re-Rbh"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
