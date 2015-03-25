@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EventsViewController : UIViewController
-//
+@property NSMutableArray *events;
+
 @end
