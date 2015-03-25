@@ -32,6 +32,9 @@
     [invocation setArgument:&no atIndex:2];
     [invocation invokeWithTarget:self.datePicker];
     
+    
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
+    self.title = @"New Event";
 }
 
 - (void)didReceiveMemoryWarning {
