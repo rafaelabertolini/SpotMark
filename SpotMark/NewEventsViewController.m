@@ -13,7 +13,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UITextField *txtDescription;
 @property (weak, nonatomic) IBOutlet UITextField *txtLocalization;
+<<<<<<< HEAD
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+=======
 @property (weak, nonatomic) IBOutlet UIDatePicker *dpdate;
+>>>>>>> c1e8c67f8659edca5e0120cbe44767f1e1ee5e4b
 
 @end
 
@@ -21,7 +25,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.datePicker setValue:[UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70] forKeyPath:@"textColor"];
+    
+    SEL selector = NSSelectorFromString(@"setHighlightsToday:");
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDatePicker instanceMethodSignatureForSelector:selector]];
+    BOOL no = NO;
+    [invocation setSelector:selector];
+    [invocation setArgument:&no atIndex:2];
+    [invocation invokeWithTarget:self.datePicker];
 }
 
 - (void)didReceiveMemoryWarning {
