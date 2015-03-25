@@ -7,6 +7,7 @@
 //
 
 #import "OneEventViewController.h"
+#import "Event.h"
 
 @interface OneEventViewController ()
 
@@ -16,7 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
+    self.title = _evt.name;
 }
 
 - (void)didReceiveMemoryWarning {

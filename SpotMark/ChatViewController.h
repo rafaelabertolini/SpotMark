@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Event.h"
 
 @interface ChatViewController : UIViewController
+
+@property Event *evt;
 
 @end

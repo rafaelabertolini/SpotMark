@@ -39,6 +39,7 @@
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		955619671AC3228F00010C68 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619661AC3228F00010C68 /* ChatViewController.m */; };
 		9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619691AC3229D00010C68 /* OneEventViewController.m */; };
+		9556196C1AC32B2C00010C68 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9556196B1AC32B2C00010C68 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		955619661AC3228F00010C68 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		955619681AC3229D00010C68 /* OneEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneEventViewController.h; sourceTree = "<group>"; };
 		955619691AC3229D00010C68 /* OneEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneEventViewController.m; sourceTree = "<group>"; };
+		9556196B1AC32B2C00010C68 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9556196C1AC32B2C00010C68 /* MapKit.framework in Frameworks */,
 				0A32C2951AC0901E00025127 /* Parse.framework in Frameworks */,
 				0A32C2911AC08FEB00025127 /* Bolts.framework in Frameworks */,
 				0A32C2921AC08FEB00025127 /* FacebookSDK.framework in Frameworks */,
@@ -222,6 +225,7 @@
 		955619551AC1B2E600010C68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9556196B1AC32B2C00010C68 /* MapKit.framework */,
 				0A32C28D1AC08FEB00025127 /* Bolts.framework */,
 				0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */,
 				0A32C28F1AC08FEB00025127 /* Parse.framework */,
