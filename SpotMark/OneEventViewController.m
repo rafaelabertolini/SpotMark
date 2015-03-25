@@ -8,8 +8,11 @@
 
 #import "OneEventViewController.h"
 #import "Event.h"
+#import <MapKit/MapKit.h>
+
 
 @interface OneEventViewController ()
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
