@@ -108,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9556196C1AC32B2C00010C68 /* MapKit.framework in Frameworks */,
 				0A32C2951AC0901E00025127 /* Parse.framework in Frameworks */,
 				0A32C2911AC08FEB00025127 /* Bolts.framework in Frameworks */,
 				0A32C2921AC08FEB00025127 /* FacebookSDK.framework in Frameworks */,
@@ -227,6 +228,7 @@
 		955619551AC1B2E600010C68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9556196B1AC32B2C00010C68 /* MapKit.framework */,
 				0A32C28D1AC08FEB00025127 /* Bolts.framework */,
 				0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */,
 				0A32C28F1AC08FEB00025127 /* Parse.framework */,

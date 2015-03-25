@@ -6,16 +6,14 @@
 //  Copyright (c) 2015 Lucas Fraga Schuler. All rights reserved.
 //
 
-#import "Event.h"
 #import "NewEventsViewController.h"
+#import <Parse/Parse.h>
 
 @interface NewEventsViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UITextField *txtDescription;
 @property (weak, nonatomic) IBOutlet UITextField *txtLocalization;
-
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
-
 
 @end
 
@@ -43,17 +41,25 @@
 }
 - (IBAction)create:(id)sender {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    Event *e = [[Event alloc] init];
-    e.name = _txtName.text;
-    e.desc = _txtDescription.text;
-    e.local = _txtLocalization.text;
-    e.date = _datePicker.date;
+    PFObject *saveObject = [PFObject objectWithClassName:@"Event"];
+    saveObject[@"name"] =  _txtName.text;;
+    saveObject[@"description"] = _txtDescription.text;
+    saveObject[@"local"] = _txtLocalization.text;
     [dateFormat setDateFormat:@"d/M/YYYY"];
-    e.date = [dateFormat stringFromDate:_datePicker.date];
+    saveObject[@"date"] = [dateFormat stringFromDate:_datePicker.date];
     [dateFormat setDateFormat:@"hh:mm"];
-    e.time = [dateFormat stringFromDate:_datePicker.date];
+    saveObject[@"time"] = [dateFormat stringFromDate:_datePicker.date];
     
-    NSLog(@"%@",e.time);
+    [saveObject saveInBackground];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Evento criado com sucesso!"
+                                                    message:@""
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    [self performSegueWithIdentifier:@"gotoOneEvent" sender:nil];
+
 }
 
 - (BOOL) hidesBottomBarWhenPushed{

@@ -194,13 +194,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="jad-YL-lZN">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JHe-eA-Cig">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="jad-YL-lZN" secondAttribute="trailing" id="5YK-Z8-gx4"/>
-                            <constraint firstAttribute="bottom" secondItem="jad-YL-lZN" secondAttribute="bottom" id="SGl-gX-Bea"/>
-                            <constraint firstItem="jad-YL-lZN" firstAttribute="leading" secondItem="iq0-T4-fYr" secondAttribute="leading" id="XXZ-Vs-tmZ"/>
-                            <constraint firstItem="jad-YL-lZN" firstAttribute="top" secondItem="iq0-T4-fYr" secondAttribute="top" id="ppt-5l-2P4"/>
+                            <constraint firstItem="JHe-eA-Cig" firstAttribute="leading" secondItem="iq0-T4-fYr" secondAttribute="leading" id="5lD-Pe-rDv"/>
+                            <constraint firstItem="JHe-eA-Cig" firstAttribute="top" secondItem="p33-Ta-Vs0" secondAttribute="bottom" id="Hui-oF-PjB"/>
+                            <constraint firstItem="PGc-P8-tfl" firstAttribute="top" secondItem="JHe-eA-Cig" secondAttribute="bottom" id="Umb-8D-K9k"/>
+                            <constraint firstItem="jad-YL-lZN" firstAttribute="top" secondItem="iq0-T4-fYr" secondAttribute="top" id="WAA-Sb-L0l"/>
+                            <constraint firstAttribute="bottom" secondItem="jad-YL-lZN" secondAttribute="bottom" id="WJl-3E-Fug"/>
+                            <constraint firstAttribute="trailing" secondItem="JHe-eA-Cig" secondAttribute="trailing" id="ZYl-po-6gR"/>
+                            <constraint firstAttribute="trailing" secondItem="jad-YL-lZN" secondAttribute="trailing" id="gFW-Py-gK9"/>
+                            <constraint firstItem="jad-YL-lZN" firstAttribute="leading" secondItem="iq0-T4-fYr" secondAttribute="leading" id="vE7-T5-45s"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Messages" id="BWt-wF-wfO">
@@ -212,12 +220,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableViewM" destination="JHe-eA-Cig" id="cSB-lO-CS7"/>
                         <segue destination="vnJ-lx-YrF" kind="show" id="gPy-Uq-59d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQ0-ia-5Yn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="250" y="1825"/>
+            <point key="canvasLocation" x="264" y="1825"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="90p-7u-SaB">
@@ -240,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Q4-Kd-JQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-67" y="2573"/>
+            <point key="canvasLocation" x="-66" y="2573"/>
         </scene>
         <!--Events-->
         <scene sceneID="DkY-VG-O83">
@@ -307,13 +316,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="PgT-Sb-MEL">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-uS-JQp">
+                                <rect key="frame" x="0.0" y="391" width="600" height="160"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="dpY-uS-JQp" id="t5h-0O-XXI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZj-KZ-1Q1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="585" y="2573"/>
+            <point key="canvasLocation" x="587" y="2573"/>
         </scene>
         <!--New Events View Controller-->
         <scene sceneID="dvN-sj-Nki">
@@ -337,16 +352,18 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ep7-og-8Fe"/>
                                 </constraints>
+                                <color key="textColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Adress" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KOL-60-v1g">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KOL-60-v1g">
                                 <rect key="frame" x="0.0" y="221" width="600" height="30"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rmn-LT-3ep"/>
                                 </constraints>
+                                <color key="textColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -389,6 +406,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="TSC-ob-voq"/>
                                 </constraints>
+                                <color key="textColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -426,6 +444,7 @@
                         <outlet property="txtDescription" destination="YvY-2D-Lpd" id="Ieg-Yp-fee"/>
                         <outlet property="txtLocalization" destination="KOL-60-v1g" id="Tae-KC-vJs"/>
                         <outlet property="txtName" destination="7Rj-BD-gFf" id="aSL-Yg-6FX"/>
+                        <segue destination="a7T-MV-DoO" kind="show" identifier="gotoOneEvent" id="Ct6-r1-8sO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNc-8N-NY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -442,7 +461,8 @@
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kvc-Bv-HLe"/>
+        <segue reference="HFn-Re-Rbh"/>
+        <segue reference="TZB-Lm-RUj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

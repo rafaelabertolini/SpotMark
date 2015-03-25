@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "Event.h"
+
 
 @interface OneEventViewController : UIViewController
+
+@property Event *evt;
 
 @end
