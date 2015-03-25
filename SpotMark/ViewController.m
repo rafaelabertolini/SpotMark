@@ -12,6 +12,7 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet FBLoginView *loginButtom;
 
 @end
@@ -29,11 +30,6 @@
         [self performSegueWithIdentifier:@"gotoEvents" sender:nil];
     }
 }
-
-//-(void) loginViewShowingLoggedInUser:(FBLoginView *)loginView{
-//    NSLog(@"you are logged in! :)");
-//    [self performSegueWithIdentifier:@"gotoEvents" sender:nil];
-//}
 
 -(void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView{
     NSLog(@"you are logged out! :(");

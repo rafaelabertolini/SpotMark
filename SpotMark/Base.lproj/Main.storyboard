@@ -91,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="905" y="-317"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="c8r-9U-vTc">
             <objects>
                 <viewController id="iQs-oE-owL" customClass="SettingsViewController" sceneMemberID="viewController">
@@ -115,7 +115,7 @@
                             <constraint firstAttribute="trailing" secondItem="xeA-oc-8Hd" secondAttribute="trailing" id="zhW-pd-azp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MtJ-A3-COk">
+                    <navigationItem key="navigationItem" title="Settings" id="MtJ-A3-COk">
                         <barButtonItem key="rightBarButtonItem" image="Plus" id="W90-LX-qdV">
                             <connections>
                                 <action selector="creator:" destination="iQs-oE-owL" id="mLN-0F-Z88"/>
@@ -179,7 +179,7 @@
             </objects>
             <point key="canvasLocation" x="264" y="1117"/>
         </scene>
-        <!--Messages View Controller-->
+        <!--Messages-->
         <scene sceneID="vQr-id-iGg">
             <objects>
                 <viewController id="8kq-VU-38O" customClass="MessagesViewController" sceneMemberID="viewController">
@@ -203,7 +203,7 @@
                             <constraint firstItem="jad-YL-lZN" firstAttribute="top" secondItem="iq0-T4-fYr" secondAttribute="top" id="ppt-5l-2P4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BWt-wF-wfO">
+                    <navigationItem key="navigationItem" title="Messages" id="BWt-wF-wfO">
                         <barButtonItem key="rightBarButtonItem" image="Plus" id="HAc-YK-GD8">
                             <connections>
                                 <action selector="creator:" destination="8kq-VU-38O" id="DaY-ro-esN"/>
@@ -216,7 +216,7 @@
             </objects>
             <point key="canvasLocation" x="264" y="1825"/>
         </scene>
-        <!--Events View Controller-->
+        <!--Events-->
         <scene sceneID="DkY-VG-O83">
             <objects>
                 <viewController id="ZHJ-d2-rMF" customClass="EventsViewController" sceneMemberID="viewController">
@@ -249,7 +249,7 @@
                             <constraint firstItem="gWi-9e-7FS" firstAttribute="leading" secondItem="8cI-RT-Jcl" secondAttribute="leading" id="paP-FM-ega"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uOh-oe-pa0">
+                    <navigationItem key="navigationItem" title="Events" id="uOh-oe-pa0">
                         <barButtonItem key="rightBarButtonItem" image="Plus" id="Kas-Ph-Iu0">
                             <connections>
                                 <action selector="Creator:" destination="ZHJ-d2-rMF" id="j00-TD-LT5"/>
@@ -290,7 +290,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Localization" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KOL-60-v1g">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Adress" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KOL-60-v1g">
                                 <rect key="frame" x="0.0" y="221" width="600" height="30"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
