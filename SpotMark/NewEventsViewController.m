@@ -8,12 +8,12 @@
 
 #import "Event.h"
 #import "NewEventsViewController.h"
+#import <Parse/Parse.h>
 
 @interface NewEventsViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UITextField *txtDescription;
 @property (weak, nonatomic) IBOutlet UITextField *txtLocalization;
-
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 
@@ -49,7 +49,9 @@
     [dateFormat setDateFormat:@"hh:mm"];
     e.time = [dateFormat stringFromDate:_datePicker.date];
     
-    NSLog(@"%@",e.time);
+    PFObject *saveObject = [PFObject objectWithClassName:@"Event"];
+    saveObject = e;
+    [saveObject saveInBackground];
 }
 
 - (BOOL) hidesBottomBarWhenPushed{
