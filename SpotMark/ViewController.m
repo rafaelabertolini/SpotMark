@@ -24,7 +24,6 @@
 
 -(void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
     if (FBSession.activeSession.isOpen) {
-        NSLog(@"passou aqui");        
         [self performSegueWithIdentifier:@"gotoEvents" sender:nil];
     }
 }

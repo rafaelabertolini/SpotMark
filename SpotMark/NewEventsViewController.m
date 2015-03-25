@@ -58,6 +58,8 @@
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
+    [self performSegueWithIdentifier:@"gotoOneEvent" sender:nil];
+
 }
 
 - (BOOL) hidesBottomBarWhenPushed{

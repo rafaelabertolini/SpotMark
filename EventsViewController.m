@@ -31,7 +31,7 @@
     _tableView.backgroundColor = [UIColor clearColor];
 
     
-    //
+   // PFQuery *query = [PFQuery]
     
 }
 
