@@ -39,7 +39,7 @@
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		955619671AC3228F00010C68 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619661AC3228F00010C68 /* ChatViewController.m */; };
 		9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619691AC3229D00010C68 /* OneEventViewController.m */; };
-		F227361F1AC3247900F10D3D /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = F227361E1AC3247900F10D3D /* Chat.m */; };
+		F2D529391AC36E1800CF748D /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D529381AC36E1800CF748D /* Chat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,8 +99,8 @@
 		955619661AC3228F00010C68 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		955619681AC3229D00010C68 /* OneEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneEventViewController.h; sourceTree = "<group>"; };
 		955619691AC3229D00010C68 /* OneEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneEventViewController.m; sourceTree = "<group>"; };
-		F227361D1AC3247900F10D3D /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chat.h; path = ../../SpotMarkAntigo/SpotMark/Chat.h; sourceTree = "<group>"; };
-		F227361E1AC3247900F10D3D /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Chat.m; path = ../../SpotMarkAntigo/SpotMark/Chat.m; sourceTree = "<group>"; };
+		F2D529371AC36E1800CF748D /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
+		F2D529381AC36E1800CF748D /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9556196C1AC32B2C00010C68 /* MapKit.framework in Frameworks */,
 				0A32C2951AC0901E00025127 /* Parse.framework in Frameworks */,
 				0A32C2911AC08FEB00025127 /* Bolts.framework in Frameworks */,
 				0A32C2921AC08FEB00025127 /* FacebookSDK.framework in Frameworks */,
@@ -215,8 +214,8 @@
 		0A32C1681ABF248F00025127 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F227361D1AC3247900F10D3D /* Chat.h */,
-				F227361E1AC3247900F10D3D /* Chat.m */,
+				F2D529371AC36E1800CF748D /* Chat.h */,
+				F2D529381AC36E1800CF748D /* Chat.m */,
 				0A32C29C1AC1F35300025127 /* Event.h */,
 				0A32C29D1AC1F35300025127 /* Event.m */,
 				0A32C16A1ABF24A800025127 /* Invites.h */,
@@ -228,7 +227,6 @@
 		955619551AC1B2E600010C68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9556196B1AC32B2C00010C68 /* MapKit.framework */,
 				0A32C28D1AC08FEB00025127 /* Bolts.framework */,
 				0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */,
 				0A32C28F1AC08FEB00025127 /* Parse.framework */,
@@ -353,7 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */,
-				F227361F1AC3247900F10D3D /* Chat.m in Sources */,
+				F2D529391AC36E1800CF748D /* Chat.m in Sources */,
 				0A32C16F1ABF24A800025127 /* Invites.m in Sources */,
 				955619671AC3228F00010C68 /* ChatViewController.m in Sources */,
 				9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */,
