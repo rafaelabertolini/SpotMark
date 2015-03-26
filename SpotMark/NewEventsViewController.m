@@ -62,6 +62,7 @@
 
 }
 
+
 - (BOOL) hidesBottomBarWhenPushed{
     return YES;
 }
