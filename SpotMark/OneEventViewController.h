@@ -11,12 +11,11 @@
 #import "Event.h"
 
 
-@interface OneEventViewController : UIViewController
+@interface OneEventViewController : UIViewController <MKMapViewDelegate>
 
 @property Event *evt;
 
-@property (nonatomic, strong) NSArray *mapItemList;
-@property (nonatomic, assign) MKCoordinateRegion boundingRegion;
+
 
 
 @end
