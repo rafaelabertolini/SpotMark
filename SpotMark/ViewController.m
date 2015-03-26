@@ -11,7 +11,7 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface ViewController ()
-
+@property BOOL isLogged;
 @end
 
 @implementation ViewController
@@ -22,7 +22,8 @@
 }
 
 -(void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
-    if (FBSession.activeSession.isOpen) {
+    if (FBSession.activeSession.isOpen && _isLogged==false) {
+        _isLogged=true;
         [self performSegueWithIdentifier:@"gotoEvents" sender:nil];
     }
 }
