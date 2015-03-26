@@ -16,6 +16,12 @@
 @property (strong, nonatomic) NSMutableArray *matchingItems;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
+@property (weak, nonatomic) IBOutlet UILabel *eventName;
+@property (weak, nonatomic) IBOutlet UILabel *eventDescription;
+@property (weak, nonatomic) IBOutlet UILabel *eventAdress;
+@property (weak, nonatomic) IBOutlet UIImageView *eventImage;
+
+
 @end
 
 @implementation OneEventViewController
