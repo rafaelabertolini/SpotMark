@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "Event.h"
 
-@interface ChatViewController : UIViewController
+@interface ChatViewController : UIViewController <UITextViewDelegate>
 
 @property Event *evt;
+@property (weak, nonatomic) IBOutlet UITextField *txtMessage;
+@property (weak, nonatomic) IBOutlet UITextView *tvChat;
+
+- (IBAction)sendMessage:(id)sender;
+
+-(void)sendMyMessage;
 
 @end

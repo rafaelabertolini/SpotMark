@@ -33,6 +33,21 @@
 
 static CGFloat keyboardHeightOffset = 0.0f;
 
+- (IBAction)sendMessage:(id)sender {
+    
+    [self sendMyMessage];
+}
+
+-(void)sendMyMessage{
+    
+    //NSData *dataToSend = [_txtMessage.text dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [_tvChat setText:[_tvChat.text stringByAppendingString:[NSString stringWithFormat:@"I wrote:\n%@\n\n", _txtMessage.text]]];
+    [_txtMessage setText:@""];
+    [_txtMessage resignFirstResponder];
+    
+    
+}
 
 
 //MARK: Keyboard Methods
@@ -74,6 +89,7 @@ static CGFloat keyboardHeightOffset = 0.0f;
     }];
     
 }
+
 
 
 
