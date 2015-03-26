@@ -34,14 +34,13 @@
 		0A32C2951AC0901E00025127 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C28F1AC08FEB00025127 /* Parse.framework */; };
 		0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */; };
 		0A32C29E1AC1F35300025127 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C29D1AC1F35300025127 /* Event.m */; };
-		0AEBF0981AC365DA00F221E0 /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0971AC365DA00F221E0 /* Chat.m */; };
 		9556195E1AC1B69100010C68 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9556195D1AC1B69100010C68 /* EventsViewController.m */; };
 		955619611AC320DF00010C68 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619601AC320DF00010C68 /* SettingsViewController.m */; };
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		955619671AC3228F00010C68 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619661AC3228F00010C68 /* ChatViewController.m */; };
 		9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619691AC3229D00010C68 /* OneEventViewController.m */; };
-		9556196F1AC368E600010C68 /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9556196E1AC368E600010C68 /* Chat.m */; };
 		955619721AC46B8900010C68 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955619711AC46B8900010C68 /* MapKit.framework */; };
+		955619781AC48ABA00010C68 /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619771AC48ABA00010C68 /* Chat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +90,6 @@
 		0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEventsViewController.m; sourceTree = "<group>"; };
 		0A32C29C1AC1F35300025127 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../Event.h; sourceTree = "<group>"; };
 		0A32C29D1AC1F35300025127 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = ../Event.m; sourceTree = "<group>"; };
-		0AEBF0961AC365DA00F221E0 /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
-		0AEBF0971AC365DA00F221E0 /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat.m; sourceTree = "<group>"; };
 		9556195C1AC1B69100010C68 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsViewController.h; path = ../EventsViewController.h; sourceTree = "<group>"; };
 		9556195D1AC1B69100010C68 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsViewController.m; path = ../EventsViewController.m; sourceTree = "<group>"; };
 		9556195F1AC320DF00010C68 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -103,9 +100,9 @@
 		955619661AC3228F00010C68 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		955619681AC3229D00010C68 /* OneEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneEventViewController.h; sourceTree = "<group>"; };
 		955619691AC3229D00010C68 /* OneEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneEventViewController.m; sourceTree = "<group>"; };
-		9556196D1AC368E600010C68 /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
-		9556196E1AC368E600010C68 /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat.m; sourceTree = "<group>"; };
 		955619711AC46B8900010C68 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		955619761AC48ABA00010C68 /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
+		955619771AC48ABA00010C68 /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,12 +202,10 @@
 		0A32C1681ABF248F00025127 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9556196D1AC368E600010C68 /* Chat.h */,
-				9556196E1AC368E600010C68 /* Chat.m */,
+				955619761AC48ABA00010C68 /* Chat.h */,
+				955619771AC48ABA00010C68 /* Chat.m */,
 				0A32C29C1AC1F35300025127 /* Event.h */,
 				0A32C29D1AC1F35300025127 /* Event.m */,
-				0AEBF0961AC365DA00F221E0 /* Chat.h */,
-				0AEBF0971AC365DA00F221E0 /* Chat.m */,
 				0A32C16A1ABF24A800025127 /* Invites.h */,
 				0A32C16B1ABF24A800025127 /* Invites.m */,
 			);
@@ -367,8 +362,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9556196F1AC368E600010C68 /* Chat.m in Sources */,
 				0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */,
+				955619781AC48ABA00010C68 /* Chat.m in Sources */,
 				0A32C16F1ABF24A800025127 /* Invites.m in Sources */,
 				955619671AC3228F00010C68 /* ChatViewController.m in Sources */,
 				9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */,

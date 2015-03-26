@@ -29,14 +29,7 @@
     
     [self textFieldReturn];
     
-//    MKUserLocation *userLocation = _mapView.userLocation;
-//    MKCoordinateRegion region =
-//     MKCoordinateRegionMakeWithDistance (
-//                                       userLocation.location.coordinate, 14.235004, 51.925279);
-//    [_mapView setRegion:region animated:NO];
-    self.mapView.showsUserLocation = YES;
     
-       
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,7 +38,7 @@
 }
 
 - (void)textFieldReturn {
-  //  [sender resignFirstResponder];
+
     [_mapView removeAnnotations:[_mapView annotations]];
     [self performSearch];
 }
@@ -54,6 +47,7 @@
 - (void) performSearch {
     
     NSLog(@"%@", _txtAdress);
+    //[self zoomIn];
     
     MKLocalSearchRequest *request =
     [[MKLocalSearchRequest alloc] init];
@@ -80,6 +74,15 @@
             }
     }];
 }
+
+//
+//- (void)zoomIn{
+//    MKUserLocation *userLocation = _mapView.userLocation;
+//    MKCoordinateRegion region =
+//    MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate, 2000000, 2000000);
+//    [_mapView setRegion:region animated:NO];
+//}
+
 /*
 #pragma mark - Navigation
 
