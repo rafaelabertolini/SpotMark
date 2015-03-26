@@ -53,6 +53,26 @@
     // TODO
 }
 
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    CustomCell *c = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+//    n = [feed objectAtIndex:(int)indexPath.row];
+//    c.feedTitle.text = n.title;
+//    c.feedDescription.text = n.shortDesc;
+//    NSURL *url = [NSURL URLWithString:n.image];
+//    c.feedImageView.imageURL = url;
+//    if (n.userDidRead) {
+//        c.feedTitle.textColor = [UIColor grayColor];
+//        c.feedDescription.textColor = [UIColor grayColor];
+//    }else{
+//        c.feedTitle.textColor = [UIColor blackColor];
+//        c.feedDescription.textColor = [UIColor blackColor];
+//    }
+//
+//    c.feedTitle=@"title";
+//    return c;
+    
+//}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

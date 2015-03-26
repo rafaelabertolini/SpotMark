@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vnJ-lx-YrF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vnJ-lx-YrF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -243,8 +243,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="6uq-nz-kbJ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L4n-hZ-Vfc">
-                                <rect key="frame" x="33" y="556" width="600" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4n-hZ-Vfc">
+                                <rect key="frame" x="33" y="556" width="534" height="44"/>
                                 <items>
                                     <barButtonItem title="Item" id="gDW-gh-8fN"/>
                                     <barButtonItem style="plain" id="CjI-2l-0VA">
@@ -267,14 +267,27 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ts-PO-RRP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ts-PO-RRP">
                                 <rect key="frame" x="0.0" y="64" width="600" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1ts-PO-RRP" secondAttribute="height" multiplier="15:11" id="VRb-gJ-Hvx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1ts-PO-RRP" firstAttribute="top" secondItem="rZk-M0-qV0" secondAttribute="bottom" id="B57-Z9-5Gg"/>
+                            <constraint firstAttribute="trailing" secondItem="1ts-PO-RRP" secondAttribute="trailing" id="DT0-JU-fnJ"/>
+                            <constraint firstItem="1ts-PO-RRP" firstAttribute="leading" secondItem="lxt-a4-uYn" secondAttribute="leading" id="HLz-gj-aa6"/>
+                            <constraint firstAttribute="trailing" secondItem="L4n-hZ-Vfc" secondAttribute="trailing" constant="33" id="UF8-qF-TDw"/>
+                            <constraint firstAttribute="bottom" secondItem="L4n-hZ-Vfc" secondAttribute="bottom" id="isE-Q5-UnM"/>
+                            <constraint firstItem="L4n-hZ-Vfc" firstAttribute="top" secondItem="9Bn-4G-RMv" secondAttribute="bottom" constant="5" id="wuH-Rs-iQX"/>
+                            <constraint firstItem="L4n-hZ-Vfc" firstAttribute="leading" secondItem="lxt-a4-uYn" secondAttribute="leading" constant="33" id="xnL-ui-cKi"/>
+                            <constraint firstItem="9Bn-4G-RMv" firstAttribute="top" secondItem="1ts-PO-RRP" secondAttribute="bottom" constant="47" id="y0c-tT-i5s"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Q4-Kd-JQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
