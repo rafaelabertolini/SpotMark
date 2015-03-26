@@ -7,6 +7,7 @@
 //
 
 #import "EventsViewController.h"
+#import "OneEventViewController.h"
 #import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
 #import "Event.h"
@@ -14,7 +15,7 @@
 @interface EventsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property Event *evt;
 @end
 
 @implementation EventsViewController
@@ -52,10 +53,6 @@
     [_tableView reloadData];
 }
 
-//-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-//    return 1;
-//}
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _events.count;
@@ -70,9 +67,23 @@
     return cell;
 }
 
-//-(UITableView *)tableView : (UITableView *) tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    return nil;
-//}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    _evt = [[Event alloc] init];
+    PFObject *e = [_events objectAtIndex:(int)indexPath.row];
+    _evt.name = e[@"name"];
+    _evt.desc = e[@"description"];
+    _evt.local = e[@"local"];
+    _evt.date = e[@"date"];
+    _evt.time = e[@"time"];
+    [self performSegueWithIdentifier:@"gotoEventDetail" sender: indexPath];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"gotoEventDetail"]){
+        OneEventViewController *oevt = (OneEventViewController *) segue.destinationViewController;
+        oevt.evt = _evt;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

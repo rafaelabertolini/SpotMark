@@ -8,6 +8,7 @@
 
 #import "NewEventsViewController.h"
 #import "OneEventViewController.h"
+#import "Event.h"
 #import <Parse/Parse.h>
 
 @interface NewEventsViewController ()
@@ -15,9 +16,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtDescription;
 @property (weak, nonatomic) IBOutlet UITextField *txtLocalization;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
-
+@property Event *e;
 @end
-//
+
 @implementation NewEventsViewController
 
 - (void)viewDidLoad {
@@ -42,14 +43,21 @@
 }
 - (IBAction)create:(id)sender {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    PFObject *saveObject = [PFObject objectWithClassName:@"Event"];
-    saveObject[@"name"] =  _txtName.text;;
-    saveObject[@"description"] = _txtDescription.text;
-    saveObject[@"local"] = _txtLocalization.text;
+    _e = [[Event alloc] init];
+    _e.name = _txtName.text;
+    _e.desc = _txtDescription.text;
+    _e.local = _txtLocalization.text;
     [dateFormat setDateFormat:@"d/M/YYYY"];
-    saveObject[@"date"] = [dateFormat stringFromDate:_datePicker.date];
+    _e.date = [dateFormat stringFromDate:_datePicker.date];
     [dateFormat setDateFormat:@"hh:mm"];
-    saveObject[@"time"] = [dateFormat stringFromDate:_datePicker.date];
+    _e.time = [dateFormat stringFromDate:_datePicker.date];
+    
+    PFObject *saveObject = [PFObject objectWithClassName:@"Event"];
+    saveObject[@"name"] =  _e.name;
+    saveObject[@"description"] = _e.desc;
+    saveObject[@"local"] = _e.local;
+    saveObject[@"time"] = _e.date;
+    saveObject[@"time"] = _e.time;
     
     [saveObject saveInBackground];
     
@@ -67,6 +75,7 @@
     OneEventViewController *oevt = (OneEventViewController *) segue.destinationViewController;
     
     oevt.txtAdress = _txtLocalization.text;
+    oevt.evt = _e;
 
 }
 

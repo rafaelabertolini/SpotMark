@@ -31,11 +31,11 @@
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = _evt.name;
-    
-    
     [self textFieldReturn];
     
-    
+    _eventName.text = _evt.name;
+    _eventDescription.text = _evt.desc;
+    _eventAdress.text = _evt.local;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,7 +57,10 @@
     
     MKLocalSearchRequest *request =
     [[MKLocalSearchRequest alloc] init];
-    request.naturalLanguageQuery = _txtAdress;
+    if(_evt.local == nil)
+        request.naturalLanguageQuery = _txtAdress;
+    else
+        request.naturalLanguageQuery = _evt.local;
     request.region = _mapView.region;
     
     _matchingItems = [[NSMutableArray alloc] init];
@@ -79,6 +82,10 @@
                 [_mapView addAnnotation:annotation];
             }
     }];
+}
+
+- (BOOL) hidesBottomBarWhenPushed{
+    return YES;
 }
 
 //
