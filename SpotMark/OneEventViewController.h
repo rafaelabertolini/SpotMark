@@ -14,7 +14,7 @@
 @interface OneEventViewController : UIViewController <MKMapViewDelegate>
 
 @property Event *evt;
-
+@property NSString *txtAdress;
 
 
 
