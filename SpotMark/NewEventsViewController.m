@@ -7,6 +7,7 @@
 //
 
 #import "NewEventsViewController.h"
+#import "OneEventViewController.h"
 #import <Parse/Parse.h>
 
 @interface NewEventsViewController ()
@@ -61,6 +62,14 @@
     [self performSegueWithIdentifier:@"gotoOneEvent" sender:nil];
 
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    OneEventViewController *oevt = (OneEventViewController *) segue.destinationViewController;
+    
+    oevt.txtAdress = _txtLocalization.text;
+
+}
+
 
 - (BOOL) hidesBottomBarWhenPushed{
     return YES;
