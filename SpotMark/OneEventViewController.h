@@ -15,4 +15,8 @@
 
 @property Event *evt;
 
+@property (nonatomic, strong) NSArray *mapItemList;
+@property (nonatomic, assign) MKCoordinateRegion boundingRegion;
+
+
 @end

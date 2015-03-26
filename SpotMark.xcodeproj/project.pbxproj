@@ -39,7 +39,8 @@
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		955619671AC3228F00010C68 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619661AC3228F00010C68 /* ChatViewController.m */; };
 		9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619691AC3229D00010C68 /* OneEventViewController.m */; };
-		F227361F1AC3247900F10D3D /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = F227361E1AC3247900F10D3D /* Chat.m */; };
+		9556196F1AC368E600010C68 /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9556196E1AC368E600010C68 /* Chat.m */; };
+		955619721AC46B8900010C68 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955619711AC46B8900010C68 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,8 +100,9 @@
 		955619661AC3228F00010C68 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		955619681AC3229D00010C68 /* OneEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneEventViewController.h; sourceTree = "<group>"; };
 		955619691AC3229D00010C68 /* OneEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneEventViewController.m; sourceTree = "<group>"; };
-		F227361D1AC3247900F10D3D /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chat.h; path = ../../SpotMarkAntigo/SpotMark/Chat.h; sourceTree = "<group>"; };
-		F227361E1AC3247900F10D3D /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Chat.m; path = ../../SpotMarkAntigo/SpotMark/Chat.m; sourceTree = "<group>"; };
+		9556196D1AC368E600010C68 /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
+		9556196E1AC368E600010C68 /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat.m; sourceTree = "<group>"; };
+		955619711AC46B8900010C68 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9556196C1AC32B2C00010C68 /* MapKit.framework in Frameworks */,
+				955619721AC46B8900010C68 /* MapKit.framework in Frameworks */,
 				0A32C2951AC0901E00025127 /* Parse.framework in Frameworks */,
 				0A32C2911AC08FEB00025127 /* Bolts.framework in Frameworks */,
 				0A32C2921AC08FEB00025127 /* FacebookSDK.framework in Frameworks */,
@@ -162,22 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				0A32C1681ABF248F00025127 /* Model */,
-				0A32BF121ABE039E00025127 /* AppDelegate.h */,
-				0A32BF131ABE039E00025127 /* AppDelegate.m */,
-				0A32BF151ABE039E00025127 /* ViewController.h */,
-				0A32BF161ABE039E00025127 /* ViewController.m */,
-				9556195C1AC1B69100010C68 /* EventsViewController.h */,
-				9556195D1AC1B69100010C68 /* EventsViewController.m */,
-				0A32C2991AC1ED8500025127 /* NewEventsViewController.h */,
-				0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */,
-				955619681AC3229D00010C68 /* OneEventViewController.h */,
-				955619691AC3229D00010C68 /* OneEventViewController.m */,
-				9556195F1AC320DF00010C68 /* SettingsViewController.h */,
-				955619601AC320DF00010C68 /* SettingsViewController.m */,
-				955619621AC3215400010C68 /* MessagesViewController.h */,
-				955619631AC3215400010C68 /* MessagesViewController.m */,
-				955619651AC3228F00010C68 /* ChatViewController.h */,
-				955619661AC3228F00010C68 /* ChatViewController.m */,
+				955619701AC395AC00010C68 /* ViewController */,
 				0A32BF181ABE039E00025127 /* Main.storyboard */,
 				0A32BF1B1ABE039E00025127 /* Images.xcassets */,
 				0A32BF1D1ABE039E00025127 /* LaunchScreen.xib */,
@@ -215,8 +202,8 @@
 		0A32C1681ABF248F00025127 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F227361D1AC3247900F10D3D /* Chat.h */,
-				F227361E1AC3247900F10D3D /* Chat.m */,
+				9556196D1AC368E600010C68 /* Chat.h */,
+				9556196E1AC368E600010C68 /* Chat.m */,
 				0A32C29C1AC1F35300025127 /* Event.h */,
 				0A32C29D1AC1F35300025127 /* Event.m */,
 				0A32C16A1ABF24A800025127 /* Invites.h */,
@@ -228,7 +215,7 @@
 		955619551AC1B2E600010C68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9556196B1AC32B2C00010C68 /* MapKit.framework */,
+				955619711AC46B8900010C68 /* MapKit.framework */,
 				0A32C28D1AC08FEB00025127 /* Bolts.framework */,
 				0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */,
 				0A32C28F1AC08FEB00025127 /* Parse.framework */,
@@ -248,6 +235,29 @@
 				0A32C1441ABE597900025127 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		955619701AC395AC00010C68 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A32BF121ABE039E00025127 /* AppDelegate.h */,
+				0A32BF131ABE039E00025127 /* AppDelegate.m */,
+				0A32BF151ABE039E00025127 /* ViewController.h */,
+				0A32BF161ABE039E00025127 /* ViewController.m */,
+				9556195C1AC1B69100010C68 /* EventsViewController.h */,
+				9556195D1AC1B69100010C68 /* EventsViewController.m */,
+				0A32C2991AC1ED8500025127 /* NewEventsViewController.h */,
+				0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */,
+				955619681AC3229D00010C68 /* OneEventViewController.h */,
+				955619691AC3229D00010C68 /* OneEventViewController.m */,
+				9556195F1AC320DF00010C68 /* SettingsViewController.h */,
+				955619601AC320DF00010C68 /* SettingsViewController.m */,
+				955619621AC3215400010C68 /* MessagesViewController.h */,
+				955619631AC3215400010C68 /* MessagesViewController.m */,
+				955619651AC3228F00010C68 /* ChatViewController.h */,
+				955619661AC3228F00010C68 /* ChatViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,8 +362,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9556196F1AC368E600010C68 /* Chat.m in Sources */,
 				0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */,
-				F227361F1AC3247900F10D3D /* Chat.m in Sources */,
 				0A32C16F1ABF24A800025127 /* Invites.m in Sources */,
 				955619671AC3228F00010C68 /* ChatViewController.m in Sources */,
 				9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */,
