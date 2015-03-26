@@ -28,7 +28,7 @@
     //[PFFacebookUtils initializeFacebook];
     
     
-    
+    [FBProfilePictureView class];
     [FBLoginView class];
     
     [[UINavigationBar appearance] setTranslucent:NO];
