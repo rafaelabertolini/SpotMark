@@ -42,7 +42,6 @@
     [query setLimit: limit];
     [query setSkip: skip];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        NSLog(@"%lu",objects.count);
         if (!error) {
             _events = [objects mutableCopy];
             [self loadTableView];
@@ -50,27 +49,29 @@
 }
 
 -(void) loadTableView{
-    // TODO
+    [_tableView reloadData];
 }
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    CustomCell *c = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-//    n = [feed objectAtIndex:(int)indexPath.row];
-//    c.feedTitle.text = n.title;
-//    c.feedDescription.text = n.shortDesc;
-//    NSURL *url = [NSURL URLWithString:n.image];
-//    c.feedImageView.imageURL = url;
-//    if (n.userDidRead) {
-//        c.feedTitle.textColor = [UIColor grayColor];
-//        c.feedDescription.textColor = [UIColor grayColor];
-//    }else{
-//        c.feedTitle.textColor = [UIColor blackColor];
-//        c.feedDescription.textColor = [UIColor blackColor];
-//    }
-//
-//    c.feedTitle=@"title";
-//    return c;
-    
+//-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+//    return 1;
+//}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _events.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    PFObject *e = [_events objectAtIndex:(int)indexPath.row];
+    cell.textLabel.text = e[@"name"];
+    return cell;
+}
+
+//-(UITableView *)tableView : (UITableView *) tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return nil;
 //}
 
 - (void)didReceiveMemoryWarning {

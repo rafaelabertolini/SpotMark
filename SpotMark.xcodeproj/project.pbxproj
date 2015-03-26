@@ -309,10 +309,11 @@
 				TargetAttributes = {
 					0A32BF0A1ABE039E00025127 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 958464RCCM;
+						DevelopmentTeam = 6D93DA2TT6;
 					};
 					0A32BF231ABE039E00025127 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 6D93DA2TT6;
 						TestTargetID = 0A32BF0A1ABE039E00025127;
 					};
 				};
