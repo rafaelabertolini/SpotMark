@@ -716,5 +716,5 @@
         <segue reference="HFn-Re-Rbh"/>
         <segue reference="Kvc-Bv-HLe"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="1" green="0.56078431370000004" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="0.96470588239999999" green="0.80784313730000001" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
 </document>
