@@ -280,7 +280,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="sendMessage:" destination="vnJ-lx-YrF" eventType="touchUpInside" id="1UJ-Yl-lxb"/>
+                                            <action selector="sendMessage:" destination="vnJ-lx-YrF" eventType="touchUpInside" id="0Gr-Bq-G71"/>
                                         </connections>
                                     </button>
                                 </subviews>
