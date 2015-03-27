@@ -8,11 +8,13 @@
 
 #import "OneEventViewController.h"
 #import "Event.h"
+#import "loadParse.h"
 #import <MapKit/MapKit.h>
+#import <Parse/Parse.h>
 
-//
 @interface OneEventViewController () <MKMapViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *matchingItems;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
@@ -38,6 +40,13 @@
     _eventName.text = _evt.name;
     _eventDescription.text = _evt.desc;
     _eventAdress.text = _evt.local;
+    
+    [self loadPosts];
+}
+
+-(void)loadPosts{
+    loadParse *ld = [[loadParse alloc]init];
+    _posts = [ld loadPosts:_evt.idEvent];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,7 +55,6 @@
 }
 
 - (void)textFieldReturn {
-
     [_mapView removeAnnotations:[_mapView annotations]];
     [self performSearch];
 }
@@ -88,6 +96,50 @@
 
 - (BOOL) hidesBottomBarWhenPushed{
     return YES;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _posts.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    PFObject *e = [_posts objectAtIndex:(int)indexPath.row];
+    cell.textLabel.text = e[@"post"];
+    return cell;
+}
+
+- (IBAction)postar:(id)sender {
+    UIAlertView *alertView = [[UIAlertView alloc]
+                              initWithTitle:@"Post"
+                              message:@"Please enter your post:"
+                              delegate:self
+                              cancelButtonTitle:@"Cancel"
+                              otherButtonTitles:@"Ok", nil];
+    [alertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    /* Display a numerical keypad for this text field */
+    UITextField *textField = [alertView textFieldAtIndex:0];
+    textField.keyboardType = UIKeyboardTypeNumberPad;
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex != [alertView cancelButtonIndex]){
+        NSString *post = [alertView textFieldAtIndex:0].text;
+        PFObject *saveObject = [PFObject objectWithClassName:@"Post"];
+        saveObject[@"idEvent"] = _evt.idEvent;
+        saveObject[@"post"] = post;
+        [saveObject saveInBackground];
+        [self loadPosts];
+        [_tableView reloadData];
+    }
+}
+
+- (IBAction)abrirChat:(id)sender {
+    //TODO
 }
 
 //

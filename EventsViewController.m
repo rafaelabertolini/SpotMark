@@ -11,6 +11,7 @@
 #import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
 #import "Event.h"
+#import "loadParse.h"
 
 @interface EventsViewController ()
 
@@ -33,24 +34,8 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-        [self loadEvents];
-}
-
--(void)loadEvents{
-    NSUInteger limit = 1000;
-    NSUInteger skip = 0;
-    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    [query setLimit: limit];
-    [query setSkip: skip];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            _events = [objects mutableCopy];
-            [self loadTableView];
-        }}];
-}
-
--(void) loadTableView{
-    [_tableView reloadData];
+    loadParse *lp = [[loadParse alloc] init];
+    _events = lp.loadEvents;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -75,6 +60,7 @@
     _evt.local = e[@"local"];
     _evt.date = e[@"date"];
     _evt.time = e[@"time"];
+    _evt.idEvent = e.objectId;
     [self performSegueWithIdentifier:@"gotoEventDetail" sender: indexPath];
 }
 

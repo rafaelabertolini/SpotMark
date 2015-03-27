@@ -58,9 +58,9 @@
     saveObject[@"local"] = _e.local;
     saveObject[@"time"] = _e.date;
     saveObject[@"time"] = _e.time;
+    saveObject.save;
     
-    [saveObject saveInBackground];
-    
+    _e.idEvent = saveObject.objectId;
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Evento criado com sucesso!"
                                                     message:@""
                                                    delegate:self
@@ -73,10 +73,8 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     OneEventViewController *oevt = (OneEventViewController *) segue.destinationViewController;
-    
     oevt.txtAdress = _txtLocalization.text;
     oevt.evt = _e;
-
 }
 
 
