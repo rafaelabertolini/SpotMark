@@ -213,6 +213,8 @@
 				0A32C16B1ABF24A800025127 /* Invites.m */,
 				0AEBF09C1AC5281700F221E0 /* loadParse.h */,
 				0AEBF09D1AC5281700F221E0 /* loadParse.m */,
+				0AEBF09F1AC5CA4D00F221E0 /* User.h */,
+				0AEBF0A01AC5CA4D00F221E0 /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -386,6 +388,7 @@
 				9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */,
 				955619641AC3215400010C68 /* MessagesViewController.m in Sources */,
 				0AEBF09E1AC5281700F221E0 /* loadParse.m in Sources */,
+				0AEBF0A11AC5CA4D00F221E0 /* User.m in Sources */,
 				955619611AC320DF00010C68 /* SettingsViewController.m in Sources */,
 				0A32BF171ABE039E00025127 /* ViewController.m in Sources */,
 				0A32BF141ABE039E00025127 /* AppDelegate.m in Sources */,

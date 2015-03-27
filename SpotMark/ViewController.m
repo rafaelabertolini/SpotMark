@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "User.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
@@ -23,6 +24,20 @@
 
 -(void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
     if (FBSession.activeSession.isOpen && _isLogged==false) {
+        
+        //REQUEST USER FRIENDS
+        
+        
+        FBRequest* friendsRequest = [FBRequest requestForMyFriends];
+        [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,NSDictionary* result,
+                                                      NSError *error) {
+            NSArray* friends = [result objectForKey:@"data"];
+            User *user1 = [User sharedUser];
+            user1.email = [user objectForKey:@"email"];
+            user1.friends_list = [friends mutableCopy];
+        }];
+        
+        //NEXT SEGUE
         _isLogged=true;
         [self performSegueWithIdentifier:@"gotoEvents" sender:nil];
     }
