@@ -12,6 +12,7 @@
 
 @interface Event : NSObject
 
+@property NSString *idEvent;
 @property NSString *name;
 @property NSString *desc;
 @property NSString *local;
