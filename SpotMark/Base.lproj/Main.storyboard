@@ -265,7 +265,6 @@
         <!--Chat View Controller-->
         <scene sceneID="90p-7u-SaB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Q4-Kd-JQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="vnJ-lx-YrF" customClass="ChatViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rZk-M0-qV0"/>
@@ -337,6 +336,7 @@
                         <outlet property="txtMessage" destination="MqV-AP-EDu" id="YNa-nq-Reg"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Q4-Kd-JQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-66" y="2573"/>
         </scene>
@@ -418,9 +418,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="PgT-Sb-MEL">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-uS-JQp">
-                                <rect key="frame" x="0.0" y="205" width="600" height="113"/>
-                            </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ws9-6r-LQ6">
                                 <rect key="frame" x="16" y="150" width="81" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -496,13 +493,21 @@
                                     <outlet property="delegate" destination="a7T-MV-DoO" id="ima-Cr-SwP"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2R2-Ht-m22">
+                                <rect key="frame" x="7" y="214" width="135" height="41"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="View on map">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewMap:" destination="a7T-MV-DoO" eventType="touchDown" id="LW9-01-chM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dpY-uS-JQp" firstAttribute="leading" secondItem="LWL-tq-evF" secondAttribute="leading" id="7Pl-wA-nv5"/>
-                            <constraint firstAttribute="bottom" secondItem="dpY-uS-JQp" secondAttribute="bottom" constant="234" id="Cu1-yY-3Yr"/>
                             <constraint firstAttribute="trailing" secondItem="58z-XP-ZCZ" secondAttribute="trailing" id="DPv-fR-obS"/>
-                            <constraint firstAttribute="trailing" secondItem="dpY-uS-JQp" secondAttribute="trailing" id="fzm-n6-r25"/>
                             <constraint firstItem="58z-XP-ZCZ" firstAttribute="leading" secondItem="LWL-tq-evF" secondAttribute="leading" id="nwU-F2-OId"/>
                             <constraint firstItem="7Km-tS-Te3" firstAttribute="top" secondItem="58z-XP-ZCZ" secondAttribute="bottom" id="zTy-m5-X9c"/>
                         </constraints>
@@ -514,11 +519,56 @@
                         <outlet property="eventName" destination="Ws9-6r-LQ6" id="I6B-MJ-h9c"/>
                         <outlet property="mapView" destination="dpY-uS-JQp" id="t5h-0O-XXI"/>
                         <outlet property="tableView" destination="mfX-C6-Sg8" id="BeQ-Ns-Iqd"/>
+                        <segue destination="fRk-Dv-AX3" kind="show" identifier="goToMap" id="Nai-c9-nBc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZj-KZ-1Q1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="583" y="2573"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="aaf-hp-f4E">
+            <objects>
+                <viewController id="fRk-Dv-AX3" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zBt-Tw-2YT"/>
+                        <viewControllerLayoutGuide type="bottom" id="RrP-KT-CK7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WUQ-MT-zbt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="wQk-kp-3Gw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-uS-JQp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TV0-qB-Vpw">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem image="Shape" width="341" id="UXV-U5-p5V">
+                                        <connections>
+                                            <action selector="zoomIn:" destination="fRk-Dv-AX3" id="BAR-eW-SNs"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="TV0-qB-Vpw" secondAttribute="bottom" id="Iox-qM-6K1"/>
+                            <constraint firstItem="TV0-qB-Vpw" firstAttribute="leading" secondItem="WUQ-MT-zbt" secondAttribute="leading" id="mox-Pb-05n"/>
+                            <constraint firstAttribute="trailing" secondItem="TV0-qB-Vpw" secondAttribute="trailing" id="oy6-bA-kRW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="dpY-uS-JQp" id="OVp-WU-Qew"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPr-YN-X1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583" y="3253"/>
         </scene>
         <!--New Events View Controller-->
         <scene sceneID="dvN-sj-Nki">
@@ -648,11 +698,12 @@
         <image name="Messages" width="30" height="27"/>
         <image name="Plus" width="20" height="20"/>
         <image name="Settings" width="32" height="32"/>
+        <image name="Shape" width="32" height="32"/>
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="HFn-Re-Rbh"/>
         <segue reference="Kvc-Bv-HLe"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="1" green="0.56078431370000004" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

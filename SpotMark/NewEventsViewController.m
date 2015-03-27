@@ -73,7 +73,6 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     OneEventViewController *oevt = (OneEventViewController *) segue.destinationViewController;
-    oevt.txtAdress = _txtLocalization.text;
     oevt.evt = _e;
 }
 
