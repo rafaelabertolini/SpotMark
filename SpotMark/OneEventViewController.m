@@ -33,6 +33,8 @@
     self.title = _evt.name;
     [self textFieldReturn];
     
+    [_mapView setZoomEnabled:YES];
+    
     _eventName.text = _evt.name;
     _eventDescription.text = _evt.desc;
     _eventAdress.text = _evt.local;
@@ -92,7 +94,7 @@
 //- (void)zoomIn{
 //    MKUserLocation *userLocation = _mapView.userLocation;
 //    MKCoordinateRegion region =
-//    MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate, 2000000, 2000000);
+//    MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate, );
 //    [_mapView setRegion:region animated:NO];
 //}
 
