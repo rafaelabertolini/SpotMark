@@ -33,6 +33,7 @@
 		0A32C2951AC0901E00025127 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C28F1AC08FEB00025127 /* Parse.framework */; };
 		0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */; };
 		0AEBF09E1AC5281700F221E0 /* loadParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF09D1AC5281700F221E0 /* loadParse.m */; };
+		0AEBF0A41AC5D26000F221E0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A31AC5D26000F221E0 /* User.m */; };
 		955619611AC320DF00010C68 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619601AC320DF00010C68 /* SettingsViewController.m */; };
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		955619671AC3228F00010C68 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619661AC3228F00010C68 /* ChatViewController.m */; };
@@ -90,6 +91,8 @@
 		0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEventsViewController.m; sourceTree = "<group>"; };
 		0AEBF09C1AC5281700F221E0 /* loadParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadParse.h; sourceTree = "<group>"; };
 		0AEBF09D1AC5281700F221E0 /* loadParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadParse.m; sourceTree = "<group>"; };
+		0AEBF0A21AC5D26000F221E0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		0AEBF0A31AC5D26000F221E0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		9556195F1AC320DF00010C68 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		955619601AC320DF00010C68 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		955619621AC3215400010C68 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				95FD4ABD1AC5BD7E0075A78A /* Event.h */,
+				0AEBF0A21AC5D26000F221E0 /* User.h */,
+				0AEBF0A31AC5D26000F221E0 /* User.m */,
 				95FD4ABE1AC5BD7E0075A78A /* Event.m */,
 				955619761AC48ABA00010C68 /* Chat.h */,
 				955619771AC48ABA00010C68 /* Chat.m */,
@@ -213,8 +218,6 @@
 				0A32C16B1ABF24A800025127 /* Invites.m */,
 				0AEBF09C1AC5281700F221E0 /* loadParse.h */,
 				0AEBF09D1AC5281700F221E0 /* loadParse.m */,
-				0AEBF09F1AC5CA4D00F221E0 /* User.h */,
-				0AEBF0A01AC5CA4D00F221E0 /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -317,7 +320,7 @@
 				TargetAttributes = {
 					0A32BF0A1ABE039E00025127 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6ZVL2ANYP3;
+						DevelopmentTeam = 6D93DA2TT6;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -329,7 +332,7 @@
 					};
 					0A32BF231ABE039E00025127 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6ZVL2ANYP3;
+						DevelopmentTeam = 6D93DA2TT6;
 						TestTargetID = 0A32BF0A1ABE039E00025127;
 					};
 				};
@@ -384,11 +387,11 @@
 				955619781AC48ABA00010C68 /* Chat.m in Sources */,
 				0A32C16F1ABF24A800025127 /* Invites.m in Sources */,
 				95FD4AC21AC5BD7E0075A78A /* EventsViewController.m in Sources */,
+				0AEBF0A41AC5D26000F221E0 /* User.m in Sources */,
 				955619671AC3228F00010C68 /* ChatViewController.m in Sources */,
 				9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */,
 				955619641AC3215400010C68 /* MessagesViewController.m in Sources */,
 				0AEBF09E1AC5281700F221E0 /* loadParse.m in Sources */,
-				0AEBF0A11AC5CA4D00F221E0 /* User.m in Sources */,
 				955619611AC320DF00010C68 /* SettingsViewController.m in Sources */,
 				0A32BF171ABE039E00025127 /* ViewController.m in Sources */,
 				0A32BF141ABE039E00025127 /* AppDelegate.m in Sources */,

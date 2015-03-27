@@ -8,6 +8,7 @@
 
 #import "SettingsViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "ViewController.h"
 
 @interface SettingsViewController ()
 @property (weak, nonatomic) IBOutlet FBProfilePictureView *profilePicture;
