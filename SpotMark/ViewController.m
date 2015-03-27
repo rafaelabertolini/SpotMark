@@ -23,8 +23,13 @@
 
 -(void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
     if (FBSession.activeSession.isOpen && _isLogged==false) {
+        
+        
+        
         _isLogged=true;
         [self performSegueWithIdentifier:@"gotoEvents" sender:nil];
+        
+        
     }
 }
 

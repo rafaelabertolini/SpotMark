@@ -34,7 +34,7 @@
     self.title = _evt.name;
 
     
-    [_mapView setZoomEnabled:YES];
+    //[_mapView setZoomEnabled:YES];
     
     _eventName.text = _evt.name;
     _eventDescription.text = _evt.desc;
