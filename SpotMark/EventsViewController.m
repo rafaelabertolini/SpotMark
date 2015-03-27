@@ -12,6 +12,7 @@
 #import <UIKit/UIKit.h>
 #import "Event.h"
 #import "loadParse.h"
+#import "User.h"
 
 @interface EventsViewController ()
 
