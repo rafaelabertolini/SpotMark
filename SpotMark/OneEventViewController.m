@@ -9,6 +9,7 @@
 #import "OneEventViewController.h"
 #import "Event.h"
 #import "loadParse.h"
+#import "MapViewController.h"
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
 #import "User.h"
@@ -16,8 +17,6 @@
 @interface OneEventViewController () <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSMutableArray *matchingItems;
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (weak, nonatomic) IBOutlet UILabel *eventName;
 @property (weak, nonatomic) IBOutlet UILabel *eventDescription;
@@ -34,7 +33,7 @@
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = _evt.name;
-    [self textFieldReturn];
+
     
     _eventName.text = _evt.name;
     _eventDescription.text = _evt.desc;
@@ -52,43 +51,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)textFieldReturn {
-    [_mapView removeAnnotations:[_mapView annotations]];
-    [self performSearch];
+
+- (IBAction)viewMap:(id)sender {
+    
+    [self performSegueWithIdentifier:@"goToMap" sender:nil];
+    
 }
 
 
-- (void) performSearch {
-    
-    NSLog(@"%@", _txtAdress);
-    
-    MKLocalSearchRequest *request =
-    [[MKLocalSearchRequest alloc] init];
-    if(_evt.local == nil)
-        request.naturalLanguageQuery = _txtAdress;
-    else
-        request.naturalLanguageQuery = _evt.local;
-    request.region = _mapView.region;
-    
-    _matchingItems = [[NSMutableArray alloc] init];
-    
-    MKLocalSearch *search =
-    [[MKLocalSearch alloc]initWithRequest:request];
-    
-    [search startWithCompletionHandler:^(MKLocalSearchResponse
-                                         *response, NSError *error) {
-        if (response.mapItems.count == 0)
-            NSLog(@"No Matches");
-        else
-            for (MKMapItem *item in response.mapItems)
-            {
-                [_matchingItems addObject:item];
-                MKPointAnnotation *annotation = [[MKPointAnnotation alloc]init];
-                annotation.coordinate = item.placemark.coordinate;
-                annotation.title = item.name;
-                [_mapView addAnnotation:annotation];
-            }
-    }];
+
+
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    MapViewController *map = (MapViewController *) segue.destinationViewController;
+    map.txtAdress = _evt.local;
+
 }
 
 - (BOOL) hidesBottomBarWhenPushed{

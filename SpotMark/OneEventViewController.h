@@ -14,7 +14,7 @@
 @interface OneEventViewController : UIViewController <MKMapViewDelegate,UIAlertViewDelegate,UITableViewDelegate , UITableViewDataSource>
 
 @property Event *evt;
-@property NSString *txtAdress;
+
 @property NSMutableArray *posts;
 
 @end

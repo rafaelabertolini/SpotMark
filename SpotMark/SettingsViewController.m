@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblUsername;
 @property (weak, nonatomic) IBOutlet FBLoginView *logoutButtom;
 
+@property BOOL isLogged;
+
 @end
 
 @implementation SettingsViewController
@@ -30,6 +32,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
+    if (FBSession.activeSession.isOpen && _isLogged==false) {
+        _isLogged=true;
+        
+        self.profilePicture.profileID = user.id;
+        self.lblUsername.text = user.name;
+        [self performSegueWithIdentifier:@"gotoLogin" sender:nil];
+    }
+}
 /*
 #pragma mark - Navigation
 
