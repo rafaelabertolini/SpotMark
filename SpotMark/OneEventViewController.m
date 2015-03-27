@@ -13,11 +13,11 @@
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
 #import "User.h"
+#import "InviteViewController.h"
 
 @interface OneEventViewController () <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @property (weak, nonatomic) IBOutlet UILabel *eventName;
 @property (weak, nonatomic) IBOutlet UILabel *eventDescription;
 @property (weak, nonatomic) IBOutlet UILabel *eventAdress;
@@ -53,20 +53,17 @@
 
 
 - (IBAction)viewMap:(id)sender {
-    
     [self performSegueWithIdentifier:@"goToMap" sender:nil];
-    
 }
-
-
-
-
-
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    MapViewController *map = (MapViewController *) segue.destinationViewController;
-    map.txtAdress = _evt.local;
+    if ([segue.identifier isEqualToString:@"gotoEventDetail"]){
+        MapViewController *map = (MapViewController *) segue.destinationViewController;
+        map.txtAdress = _evt.local;
+    }else if([segue.identifier isEqualToString:@"gotoInviteFromEvent"]){
+        NSLog(@"passou aqui");
+    }
 
 }
 
@@ -119,7 +116,7 @@
 }
 
 - (IBAction)Invite:(id)sender {
-    
+    [self performSegueWithIdentifier:@"gotoInviteFromEvent" sender:nil];
 }
 
 //

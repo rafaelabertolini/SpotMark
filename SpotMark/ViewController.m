@@ -26,8 +26,6 @@
     if (FBSession.activeSession.isOpen && _isLogged==false) {
         
         //REQUEST USER FRIENDS
-        
-        
         FBRequest* friendsRequest = [FBRequest requestForMyFriends];
         [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,NSDictionary* result,
                                                       NSError *error) {
