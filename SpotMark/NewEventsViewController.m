@@ -56,7 +56,7 @@
     saveObject[@"name"] =  _e.name;
     saveObject[@"description"] = _e.desc;
     saveObject[@"local"] = _e.local;
-    saveObject[@"time"] = _e.date;
+    saveObject[@"date"] = _e.date;
     saveObject[@"time"] = _e.time;
     saveObject.save;
     
@@ -74,6 +74,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     OneEventViewController *oevt = (OneEventViewController *) segue.destinationViewController;
     oevt.evt = _e;
+    oevt.newEvent=YES;
 }
 
 

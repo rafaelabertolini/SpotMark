@@ -9,6 +9,7 @@
 #import "InviteViewController.h"
 #import "User.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "CustonCellInvite.h"
 
 @interface InviteViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -19,7 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _tableView.allowsMultipleSelection = YES;
     _user1 = [User sharedUser];
+    _friend_list = [[NSMutableArray alloc] init];
     // Do any additional setup after loading the view.
 }
 
@@ -36,18 +39,33 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    CustomCellInvite *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     NSDictionary<FBGraphUser> *friend = [_user1.friends_list objectAtIndex:(int)indexPath.row];
-    cell.textLabel.text = friend.name;
+    cell.name.text = friend.name;
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?width=200&height=200", friend.objectID]];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    [cell.image setImage:[UIImage imageWithData:data]];
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    _evt = [[Event alloc] init];
-//    PFObject *e = [_events objectAtIndex:(int)indexPath.row];
-//    _evt.name = e[@"name"];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath   *)indexPath
+{
+    [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
 }
 
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
+}
+
+- (IBAction)inviteFriends:(id)sender {
+    NSArray *indexes = [_tableView indexPathsForSelectedRows];
+    for (NSIndexPath *path in indexes) {
+        NSUInteger index = [path indexAtPosition:[path length] - 1];
+        //TODO
+    }
+    [self performSegueWithIdentifier:@"backToOneEvent" sender:nil];
+}
 
 /*
 #pragma mark - Navigation

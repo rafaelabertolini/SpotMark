@@ -30,15 +30,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = _evt.name;
-
     
     _eventName.text = _evt.name;
     _eventDescription.text = _evt.desc;
     _eventAdress.text = _evt.local;
     [self loadPosts];
+    if(_newEvent)
+        [self Invite:nil];
 }
 
 -(void)loadPosts{
@@ -58,9 +58,10 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"gotoEventDetail"]){
+    if ([segue.identifier isEqualToString:@"goToMap"]){
         MapViewController *map = (MapViewController *) segue.destinationViewController;
         map.txtAdress = _evt.local;
+        NSLog(@"%@", map.txtAdress);
     }else if([segue.identifier isEqualToString:@"gotoInviteFromEvent"]){
         NSLog(@"passou aqui");
     }
@@ -117,6 +118,10 @@
 
 - (IBAction)Invite:(id)sender {
     [self performSegueWithIdentifier:@"gotoInviteFromEvent" sender:nil];
+}
+
+-(IBAction)backFromInvite:(UIStoryboardSegue *)segue
+{
 }
 
 //
