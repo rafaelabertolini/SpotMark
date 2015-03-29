@@ -32,6 +32,7 @@
             NSArray* friends = [result objectForKey:@"data"];
             User *user1 = [User sharedUser];
             user1.email = [user objectForKey:@"email"];
+            user1.objectId = [user objectID];
             user1.friends_list = [friends mutableCopy];
         }];
         

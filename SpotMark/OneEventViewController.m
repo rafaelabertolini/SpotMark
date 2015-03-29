@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *eventDescription;
 @property (weak, nonatomic) IBOutlet UILabel *eventAdress;
 @property (weak, nonatomic) IBOutlet UIImageView *eventImage;
+@property (weak, nonatomic) IBOutlet UIButton *invite;
 
 
 @end
@@ -30,6 +31,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //SE O USUARIO NAO CRIOU O EVENTO O BOTAO P/ CONVIDAR NAO APARECE
+    User *user1 = [User sharedUser];
+    if(![user1.email isEqual:_evt.admin])
+        _invite.hidden=YES;
+        
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = _evt.name;
     
@@ -63,7 +70,8 @@
         map.txtAdress = _evt.local;
         NSLog(@"%@", map.txtAdress);
     }else if([segue.identifier isEqualToString:@"gotoInviteFromEvent"]){
-        NSLog(@"passou aqui");
+        InviteViewController *ivc = (InviteViewController *) segue.destinationViewController;
+        ivc.idEvent = _evt.idEvent;
     }
 
 }

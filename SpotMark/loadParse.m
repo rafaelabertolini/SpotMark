@@ -11,14 +11,22 @@
 
 @implementation loadParse
 
--(NSMutableArray *)loadEvents{
+-(NSMutableArray *)loadEvents : (NSString *) idUser{
     NSUInteger limit = 1000;
     NSUInteger skip = 0;
-    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    [query orderByDescending:@"createdAt"];
-    [query setLimit: limit];
-    [query setSkip: skip];
-    NSArray *objects = query.findObjects;
+    PFQuery *userQuery = [PFQuery queryWithClassName:@"UserEvent"];
+    PFQuery *eventQuery = [PFQuery queryWithClassName:@"Event"];
+    
+    [userQuery whereKey:@"user" equalTo:idUser];
+    [eventQuery whereKey:@"objectId" matchesKey:@"event" inQuery:userQuery];
+    [eventQuery orderByDescending:@"createdAt"];
+
+    [eventQuery setLimit: limit];
+    [eventQuery setSkip: skip];
+    
+    NSLog(@"aqui");
+    
+    NSArray *objects = eventQuery.findObjects;
     return [objects mutableCopy];
 }
 

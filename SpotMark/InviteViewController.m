@@ -10,6 +10,7 @@
 #import "User.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "CustonCellInvite.h"
+#import <Parse/Parse.h>
 
 @interface InviteViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -61,8 +62,12 @@
 - (IBAction)inviteFriends:(id)sender {
     NSArray *indexes = [_tableView indexPathsForSelectedRows];
     for (NSIndexPath *path in indexes) {
-        NSUInteger index = [path indexAtPosition:[path length] - 1];
-        //TODO
+        NSInteger index = [path indexAtPosition:[path length] - 1];
+        NSDictionary<FBGraphUser> *friend = [_user1.friends_list objectAtIndex:(int)index];
+        PFObject *object = [PFObject objectWithClassName:@"UserEvent"];
+        object [@"user"] = friend.objectID;
+        object [@"event"] = _idEvent;
+        [object saveInBackground];
     }
     [self performSegueWithIdentifier:@"backToOneEvent" sender:nil];
 }

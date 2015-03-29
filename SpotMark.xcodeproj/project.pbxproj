@@ -214,9 +214,9 @@
 		0A32C1681ABF248F00025127 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				95FD4ABD1AC5BD7E0075A78A /* Event.h */,
 				0AEBF0A21AC5D26000F221E0 /* User.h */,
 				0AEBF0A31AC5D26000F221E0 /* User.m */,
+				95FD4ABD1AC5BD7E0075A78A /* Event.h */,
 				95FD4ABE1AC5BD7E0075A78A /* Event.m */,
 				955619761AC48ABA00010C68 /* Chat.h */,
 				955619771AC48ABA00010C68 /* Chat.m */,
@@ -532,13 +532,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rafaela dos Santos Bertolini (J7H8THG3DL)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rafaela dos Santos Bertolini (J7H8THG3DL)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = SpotMark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e1b7db8d-f6c3-487d-bebf-83d7f67ddbcb";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -546,13 +546,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rafaela dos Santos Bertolini (J7H8THG3DL)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rafaela dos Santos Bertolini (J7H8THG3DL)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = SpotMark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e1b7db8d-f6c3-487d-bebf-83d7f67ddbcb";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

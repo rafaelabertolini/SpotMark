@@ -35,8 +35,10 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [_tableView reloadData];
     loadParse *lp = [[loadParse alloc] init];
-    _events = lp.loadEvents;
+    User *user1 = [User sharedUser];
+    _events = [lp loadEvents:user1.objectId];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -61,6 +63,7 @@
     _evt.local = e[@"local"];
     _evt.date = e[@"date"];
     _evt.time = e[@"time"];
+    _evt.admin = e[@"admin"];
     _evt.idEvent = e.objectId;
     [self performSegueWithIdentifier:@"gotoEventDetail" sender: indexPath];
 }

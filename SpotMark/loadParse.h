@@ -10,7 +10,7 @@
 
 @interface loadParse : NSObject
 
--(NSMutableArray *) loadEvents;
+-(NSMutableArray *) loadEvents : (NSString *) email;
 -(NSMutableArray *) loadPosts : (NSString *) idEvent;
 
 @end
