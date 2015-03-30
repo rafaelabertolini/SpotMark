@@ -13,15 +13,16 @@
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
 #import "User.h"
+#import "InviteViewController.h"
 
 @interface OneEventViewController () <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @property (weak, nonatomic) IBOutlet UILabel *eventName;
 @property (weak, nonatomic) IBOutlet UILabel *eventDescription;
 @property (weak, nonatomic) IBOutlet UILabel *eventAdress;
 @property (weak, nonatomic) IBOutlet UIImageView *eventImage;
+@property (weak, nonatomic) IBOutlet UIButton *invite;
 
 
 @end
@@ -31,14 +32,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //SE O USUARIO NAO CRIOU O EVENTO O BOTAO P/ CONVIDAR NAO APARECE
+    User *user1 = [User sharedUser];
+    if(![user1.email isEqual:_evt.admin])
+        _invite.hidden=YES;
+        
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = _evt.name;
-
     
     _eventName.text = _evt.name;
     _eventDescription.text = _evt.desc;
     _eventAdress.text = _evt.local;
     [self loadPosts];
+    if(_newEvent)
+        [self Invite:nil];
 }
 
 -(void)loadPosts{
@@ -53,20 +60,19 @@
 
 
 - (IBAction)viewMap:(id)sender {
-    
     [self performSegueWithIdentifier:@"goToMap" sender:nil];
-    
 }
-
-
-
-
-
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    MapViewController *map = (MapViewController *) segue.destinationViewController;
-    map.txtAdress = _evt.local;
+    if ([segue.identifier isEqualToString:@"goToMap"]){
+        MapViewController *map = (MapViewController *) segue.destinationViewController;
+        map.txtAdress = _evt.local;
+        NSLog(@"%@", map.txtAdress);
+    }else if([segue.identifier isEqualToString:@"gotoInviteFromEvent"]){
+        InviteViewController *ivc = (InviteViewController *) segue.destinationViewController;
+        ivc.idEvent = _evt.idEvent;
+    }
 
 }
 
@@ -119,7 +125,11 @@
 }
 
 - (IBAction)Invite:(id)sender {
-    
+    [self performSegueWithIdentifier:@"gotoInviteFromEvent" sender:nil];
+}
+
+-(IBAction)backFromInvite:(UIStoryboardSegue *)segue
+{
 }
 
 //

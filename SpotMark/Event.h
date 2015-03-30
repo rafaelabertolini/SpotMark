@@ -21,6 +21,7 @@
 @property NSMutableArray *participants;
 @property NSMutableArray *feed;
 @property NSString *eventId;
+@property NSString *admin;
 //@property tipo *image;
 
 

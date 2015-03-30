@@ -10,6 +10,7 @@
 #import "OneEventViewController.h"
 #import "Event.h"
 #import <Parse/Parse.h>
+#import "User.h"
 
 @interface NewEventsViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
@@ -41,7 +42,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)create:(id)sender {
+    User *user1 = [User sharedUser];
+    
+    //CRIA O EVENTO
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     _e = [[Event alloc] init];
     _e.name = _txtName.text;
@@ -52,15 +57,24 @@
     [dateFormat setDateFormat:@"hh:mm"];
     _e.time = [dateFormat stringFromDate:_datePicker.date];
     
+    //ADICIONA O EVENTO AO PARSE
     PFObject *saveObject = [PFObject objectWithClassName:@"Event"];
     saveObject[@"name"] =  _e.name;
     saveObject[@"description"] = _e.desc;
     saveObject[@"local"] = _e.local;
-    saveObject[@"time"] = _e.date;
+    saveObject[@"date"] = _e.date;
     saveObject[@"time"] = _e.time;
-    saveObject.save;
-    
+    saveObject[@"admin"] = user1.email;
+    [saveObject save];
     _e.idEvent = saveObject.objectId;
+    
+    // ADICIONA O USUARIO AO EVENTO
+    PFObject *userEvent = [PFObject objectWithClassName:@"UserEvent"];
+    userEvent [@"user"] = user1.objectId;
+    userEvent [@"event"] = _e.idEvent;
+    [userEvent saveInBackground];
+    
+    // SE NAO OCORRER ERRO MOSTRA MENSAGEM E VAI P/ A TELA DO EVENTO
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Evento criado com sucesso!"
                                                     message:@""
                                                    delegate:self
@@ -74,6 +88,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     OneEventViewController *oevt = (OneEventViewController *) segue.destinationViewController;
     oevt.evt = _e;
+    oevt.newEvent=YES;
 }
 
 
