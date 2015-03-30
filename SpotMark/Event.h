@@ -22,8 +22,7 @@
 @property NSMutableArray *feed;
 @property NSString *eventId;
 @property NSString *admin;
-//@property tipo *image;
-
+@property NSString *category;
 
 +(Event *)eventCreator;
 -(void)postCreator : (NSString *)title : (NSString *)post;
