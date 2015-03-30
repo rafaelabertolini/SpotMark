@@ -13,6 +13,7 @@
 #import "Event.h"
 #import "loadParse.h"
 #import "User.h"
+#import "EventTableCell.h"
 
 @interface EventsViewController ()
 
@@ -48,10 +49,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    static NSString *cellIdentifier = @"Event";
+    EventTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     PFObject *e = [_events objectAtIndex:(int)indexPath.row];
-    cell.textLabel.text = e[@"name"];
+    cell.nameLabel.text = e[@"name"];
+    cell.dateLabel.text = e[@"dateTime"];
+    cell.localLabel.text = e[@"local"];
+    cell.eventImage.image = e[@"categoria"];
     return cell;
 }
 
