@@ -26,16 +26,13 @@
     if (FBSession.activeSession.isOpen && _isLogged==false) {
         
         //REQUEST USER FRIENDS
-        
-        
         FBRequest* friendsRequest = [FBRequest requestForMyFriends];
         [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,NSDictionary* result,
                                                       NSError *error) {
             NSArray* friends = [result objectForKey:@"data"];
             User *user1 = [User sharedUser];
             user1.email = [user objectForKey:@"email"];
-            user1.name = [user name];
-            user
+            user1.objectId = [user objectID];
             user1.friends_list = [friends mutableCopy];
         }];
         

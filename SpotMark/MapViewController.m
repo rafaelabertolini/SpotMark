@@ -64,9 +64,6 @@
 
 - (void) performSearch {
     
-    NSLog(@"%@", _txtAdress);
-    //[self zoomIn];
-    
     MKLocalSearchRequest *request =
     [[MKLocalSearchRequest alloc] init];
     if(_evt.local == nil)

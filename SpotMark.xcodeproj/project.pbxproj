@@ -34,6 +34,8 @@
 		0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */; };
 		0AEBF09E1AC5281700F221E0 /* loadParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF09D1AC5281700F221E0 /* loadParse.m */; };
 		0AEBF0A41AC5D26000F221E0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A31AC5D26000F221E0 /* User.m */; };
+		0AEBF0A71AC5E0C400F221E0 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A61AC5E0C400F221E0 /* InviteViewController.m */; };
+		0AEBF0AA1AC635E000F221E0 /* CustonCellInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A91AC635E000F221E0 /* CustonCellInvite.m */; };
 		955619611AC320DF00010C68 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619601AC320DF00010C68 /* SettingsViewController.m */; };
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		955619671AC3228F00010C68 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619661AC3228F00010C68 /* ChatViewController.m */; };
@@ -93,6 +95,10 @@
 		0AEBF09D1AC5281700F221E0 /* loadParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadParse.m; sourceTree = "<group>"; };
 		0AEBF0A21AC5D26000F221E0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		0AEBF0A31AC5D26000F221E0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		0AEBF0A51AC5E0C400F221E0 /* InviteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteViewController.h; sourceTree = "<group>"; };
+		0AEBF0A61AC5E0C400F221E0 /* InviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteViewController.m; sourceTree = "<group>"; };
+		0AEBF0A81AC635E000F221E0 /* CustonCellInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustonCellInvite.h; sourceTree = "<group>"; };
+		0AEBF0A91AC635E000F221E0 /* CustonCellInvite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustonCellInvite.m; sourceTree = "<group>"; };
 		9556195F1AC320DF00010C68 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		955619601AC320DF00010C68 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		955619621AC3215400010C68 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
@@ -208,9 +214,9 @@
 		0A32C1681ABF248F00025127 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				95FD4ABD1AC5BD7E0075A78A /* Event.h */,
 				0AEBF0A21AC5D26000F221E0 /* User.h */,
 				0AEBF0A31AC5D26000F221E0 /* User.m */,
+				95FD4ABD1AC5BD7E0075A78A /* Event.h */,
 				95FD4ABE1AC5BD7E0075A78A /* Event.m */,
 				955619761AC48ABA00010C68 /* Chat.h */,
 				955619771AC48ABA00010C68 /* Chat.m */,
@@ -218,6 +224,8 @@
 				0A32C16B1ABF24A800025127 /* Invites.m */,
 				0AEBF09C1AC5281700F221E0 /* loadParse.h */,
 				0AEBF09D1AC5281700F221E0 /* loadParse.m */,
+				0AEBF0A81AC635E000F221E0 /* CustonCellInvite.h */,
+				0AEBF0A91AC635E000F221E0 /* CustonCellInvite.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -267,6 +275,8 @@
 				955619631AC3215400010C68 /* MessagesViewController.m */,
 				955619651AC3228F00010C68 /* ChatViewController.h */,
 				955619661AC3228F00010C68 /* ChatViewController.m */,
+				0AEBF0A51AC5E0C400F221E0 /* InviteViewController.h */,
+				0AEBF0A61AC5E0C400F221E0 /* InviteViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -392,11 +402,13 @@
 				9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */,
 				955619641AC3215400010C68 /* MessagesViewController.m in Sources */,
 				0AEBF09E1AC5281700F221E0 /* loadParse.m in Sources */,
+				0AEBF0AA1AC635E000F221E0 /* CustonCellInvite.m in Sources */,
 				955619611AC320DF00010C68 /* SettingsViewController.m in Sources */,
 				0A32BF171ABE039E00025127 /* ViewController.m in Sources */,
 				0A32BF141ABE039E00025127 /* AppDelegate.m in Sources */,
 				0A32BF111ABE039E00025127 /* main.m in Sources */,
 				95FD4AC51AC5BDF80075A78A /* MapViewController.m in Sources */,
+				0AEBF0A71AC5E0C400F221E0 /* InviteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
