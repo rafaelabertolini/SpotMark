@@ -17,12 +17,15 @@
 
 @interface OneEventViewController () <MKMapViewDelegate>
 
+@property User *user1;
+@property loadParse *lp;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *eventName;
 @property (weak, nonatomic) IBOutlet UILabel *eventDescription;
 @property (weak, nonatomic) IBOutlet UILabel *eventAdress;
 @property (weak, nonatomic) IBOutlet UIImageView *eventImage;
 @property (weak, nonatomic) IBOutlet UIButton *invite;
+@property (weak, nonatomic) IBOutlet UIButton *exit;
 
 
 @end
@@ -33,10 +36,13 @@
     [super viewDidLoad];
     
     //SE O USUARIO NAO CRIOU O EVENTO O BOTAO P/ CONVIDAR NAO APARECE
-    User *user1 = [User sharedUser];
-    if(![user1.email isEqual:_evt.admin])
+    _user1 = [User sharedUser];
+    if(![_user1.email isEqual:_evt.admin]){
         _invite.hidden=YES;
-        
+        _exit.titleLabel.text = @"Sair do evento";
+    }
+    
+    
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = _evt.name;
     
@@ -49,15 +55,14 @@
 }
 
 -(void)loadPosts{
-    loadParse *ld = [[loadParse alloc]init];
-    _posts = [ld loadPosts:_evt.idEvent];
+    _lp = [[loadParse alloc]init];
+    _posts = [_lp loadPosts:_evt.idEvent];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 - (IBAction)viewMap:(id)sender {
     [self performSegueWithIdentifier:@"goToMap" sender:nil];
@@ -126,6 +131,17 @@
 
 - (IBAction)Invite:(id)sender {
     [self performSegueWithIdentifier:@"gotoInviteFromEvent" sender:nil];
+}
+
+- (IBAction)sair:(id)sender {
+    if(![_user1.email isEqual:_evt.admin])
+        [_lp sairEvento:_user1.objectId : _evt.idEvent];
+    else
+        [_lp excluirEvento:_evt.idEvent];
+}
+
+- (IBAction)participants:(id)sender {
+    //TODO
 }
 
 -(IBAction)backFromInvite:(UIStoryboardSegue *)segue
