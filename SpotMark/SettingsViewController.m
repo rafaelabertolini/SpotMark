@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "ViewController.h"
+#import "User.h"
 
 @interface SettingsViewController ()
 @property (weak, nonatomic) IBOutlet FBProfilePictureView *profilePicture;
@@ -23,6 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
 
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = @"Settings";
@@ -34,15 +38,16 @@
 }
 
 
--(void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
-    if (FBSession.activeSession.isOpen && _isLogged==false) {
-        _isLogged=true;
-        
-        self.profilePicture.profileID = user.id;
-        self.lblUsername.text = user.name;
-        [self performSegueWithIdentifier:@"gotoLogin" sender:nil];
-    }
+-(void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView{
+    NSLog(@"you are logged out! :(");
+    
+    User *user1 = [User sharedUser];
+    NSLog(@"%@",user1.email);
+    _lblUsername.text = user1.name;
+    _profilePicture = user1.profileImage;
+    
 }
+
 /*
 #pragma mark - Navigation
 
