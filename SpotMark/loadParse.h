@@ -12,5 +12,7 @@
 
 -(NSMutableArray *) loadEvents : (NSString *) email;
 -(NSMutableArray *) loadPosts : (NSString *) idEvent;
+-(void) sairEvento : (NSString *) user : (NSString *) event;
+-(void) excluirEvento : (NSString *) event;
 
 @end

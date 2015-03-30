@@ -17,13 +17,19 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtDescription;
 @property (weak, nonatomic) IBOutlet UITextField *txtLocalization;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UIPickerView *category;
 @property Event *e;
+@property NSArray *listCategory;
+@property NSInteger *rowPickerView;
 @end
 
 @implementation NewEventsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _listCategory = @[@"Esporte", @"Reunião", @"Lazer", @"Festa"];
+    
     [self.datePicker setValue:[UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70] forKeyPath:@"textColor"];
     
     SEL selector = NSSelectorFromString(@"setHighlightsToday:");
@@ -65,6 +71,7 @@
     saveObject[@"date"] = _e.date;
     saveObject[@"time"] = _e.time;
     saveObject[@"admin"] = user1.email;
+    saveObject[@"category"] = _e.category;
     [saveObject save];
     _e.idEvent = saveObject.objectId;
     
@@ -73,6 +80,8 @@
     userEvent [@"user"] = user1.objectId;
     userEvent [@"event"] = _e.idEvent;
     [userEvent saveInBackground];
+    
+    
     
     // SE NAO OCORRER ERRO MOSTRA MENSAGEM E VAI P/ A TELA DO EVENTO
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Evento criado com sucesso!"
@@ -91,6 +100,22 @@
     oevt.newEvent=YES;
 }
 
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+// The number of rows of data
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return 4;
+}
+
+// The data to return for the row and component (column) that's being passed in
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return [_listCategory objectAtIndex:row];
+}
 
 - (BOOL) hidesBottomBarWhenPushed{
     return YES;
