@@ -32,6 +32,9 @@
             NSArray* friends = [result objectForKey:@"data"];
             User *user1 = [User sharedUser];
             user1.email = [user objectForKey:@"email"];
+            
+            //user1.Picture.profileID = [user forKey:@"https://graph.facebook.com/%@/picture?type=large"];
+            user1.name = [user name];
             user1.objectId = [user objectID];
             user1.friends_list = [friends mutableCopy];
         }];

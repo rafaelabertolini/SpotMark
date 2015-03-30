@@ -7,6 +7,8 @@
 //
 
 #import <foundation/Foundation.h>
+#import <FacebookSDK/FacebookSDK.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface User : NSObject {
   
@@ -15,6 +17,12 @@
 @property (nonatomic, retain) NSString *email;
 @property (nonatomic, retain) NSMutableArray *friends_list;
 @property (nonatomic, retain) NSString *objectId;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *imageUrl;
+
+
+@property (nonatomic, retain) FBProfilePictureView *Picture;
+
 
 + (id)sharedUser;
 

@@ -8,6 +8,8 @@
 
 #import "SettingsViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "User.h"
+#import "ViewController.h"
 
 @interface SettingsViewController ()
 @property (weak, nonatomic) IBOutlet FBProfilePictureView *profilePicture;
@@ -22,6 +24,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    User *user2 = [User sharedUser];
+    self.lblUsername.text = user2.name;
+    _profilePicture.profileID = user2.Picture;
+    
+    
+    
 
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = @"Settings";
@@ -37,19 +47,15 @@
     if (FBSession.activeSession.isOpen && _isLogged==false) {
         _isLogged=true;
         
-        self.profilePicture.profileID = user.id;
-        self.lblUsername.text = user.name;
-        [self performSegueWithIdentifier:@"gotoLogin" sender:nil];
+        //User *user2 = [User sharedUser];
+        //self.lblUsername.text = user2.name;
+        //_profilePicture = user2.imageUrl;
+        
+        [self performSegueWithIdentifier:@"gotoBegin" sender:nil];
+        
+        
     }
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
