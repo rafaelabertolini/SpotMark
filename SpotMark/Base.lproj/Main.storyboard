@@ -540,7 +540,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mfX-C6-Sg8">
-                                <rect key="frame" x="0.0" y="326" width="600" height="173"/>
+                                <rect key="frame" x="0.0" y="344" width="600" height="173"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="mbs-ap-dam">
@@ -556,19 +556,8 @@
                                     <outlet property="delegate" destination="a7T-MV-DoO" id="ima-Cr-SwP"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2R2-Ht-m22">
-                                <rect key="frame" x="415" y="220" width="135" height="41"/>
-                                <color key="backgroundColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="View on map">
-                                    <color key="titleColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="viewMap:" destination="a7T-MV-DoO" eventType="touchDown" id="LW9-01-chM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkW-lE-Hh9">
-                                <rect key="frame" x="240" y="205" width="98" height="30"/>
+                                <rect key="frame" x="400" y="315" width="200" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Excluir Evento">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -578,7 +567,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZC-3b-oCs">
-                                <rect key="frame" x="248" y="263" width="82" height="30"/>
+                                <rect key="frame" x="210" y="315" width="190" height="30"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Participants">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -588,7 +577,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKh-vJ-dzy">
-                                <rect key="frame" x="155" y="263" width="59" height="30"/>
+                                <rect key="frame" x="0.0" y="315" width="210" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Invite">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -596,6 +585,17 @@
                                 </state>
                                 <connections>
                                     <action selector="Invite:" destination="a7T-MV-DoO" eventType="touchUpInside" id="wK9-xg-jMv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2R2-Ht-m22">
+                                <rect key="frame" x="455" y="238" width="135" height="41"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="View on map">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewMap:" destination="a7T-MV-DoO" eventType="touchDown" id="LW9-01-chM"/>
                                 </connections>
                             </button>
                         </subviews>
