@@ -734,7 +734,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZSj-th-1Rl">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSj-th-1Rl">
                                 <rect key="frame" x="0.0" y="158" width="600" height="162"/>
                                 <connections>
                                     <outlet property="dataSource" destination="6gQ-Q7-tbB" id="7Y0-9A-Oup"/>
@@ -752,11 +752,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1II-sS-iFE">
-                                <rect key="frame" x="111" y="405" width="123" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="43i-gW-gnb">
+                                <rect key="frame" x="36" y="231" width="435" height="29"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Esporte"/>
+                                    <segment title="Festa"/>
+                                    <segment title="Lazer"/>
+                                    <segment title="Reunião"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeT-Tj-l0C">
@@ -799,13 +801,14 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="ZSj-th-1Rl"/>
                                 <exclude reference="XeT-Tj-l0C"/>
                                 <exclude reference="e13-JO-nto"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="category" destination="ZSj-th-1Rl" id="QC4-FX-KDg"/>
+                        <outlet property="category" destination="43i-gW-gnb" id="2Nb-2w-yHB"/>
                         <outlet property="datePicker" destination="Ttw-BL-lOo" id="uh8-VQ-PcZ"/>
                         <outlet property="txtDescription" destination="YvY-2D-Lpd" id="Ieg-Yp-fee"/>
                         <outlet property="txtLocalization" destination="KOL-60-v1g" id="Tae-KC-vJs"/>
