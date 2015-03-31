@@ -40,6 +40,8 @@
         //NEXT SEGUE
         _isLogged=true;
         [self performSegueWithIdentifier:@"gotoEvents" sender:nil];
+        
+        
     }
 }
 

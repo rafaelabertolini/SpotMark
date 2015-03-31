@@ -7,6 +7,7 @@
 //
 
 #import <foundation/Foundation.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface User : NSObject {
   
