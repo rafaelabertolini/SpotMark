@@ -13,6 +13,7 @@
 #import "User.h"
 
 @interface NewEventsViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UITextField *txtDescription;
 @property (weak, nonatomic) IBOutlet UITextField *txtLocalization;
@@ -21,6 +22,7 @@
 @property Event *e;
 @property NSArray *listCategory;
 @property NSInteger *rowPickerView;
+
 @end
 
 @implementation NewEventsViewController

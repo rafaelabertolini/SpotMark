@@ -10,6 +10,4 @@
 
 @implementation NSObject (Chat)
 
-
-
 @end

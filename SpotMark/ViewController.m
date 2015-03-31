@@ -12,7 +12,9 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface ViewController ()
+
 @property BOOL isLogged;
+
 @end
 
 @implementation ViewController
@@ -40,6 +42,8 @@
         //NEXT SEGUE
         _isLogged=true;
         [self performSegueWithIdentifier:@"gotoEvents" sender:nil];
+        
+        
     }
 }
 

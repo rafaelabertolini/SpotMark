@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *tvChat;
 
 - (IBAction)sendMessage:(id)sender;
-
 -(void)sendMyMessage;
 
 @end

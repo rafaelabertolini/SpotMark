@@ -45,6 +45,7 @@
 		95FD4AC11AC5BD7E0075A78A /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4ABE1AC5BD7E0075A78A /* Event.m */; };
 		95FD4AC21AC5BD7E0075A78A /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4AC01AC5BD7E0075A78A /* EventsViewController.m */; };
 		95FD4AC51AC5BDF80075A78A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4AC41AC5BDF80075A78A /* MapViewController.m */; };
+		95FD4ACD1AC9D68C0075A78A /* EventTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4ACC1AC9D68C0075A78A /* EventTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,8 @@
 		95FD4AC01AC5BD7E0075A78A /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		95FD4AC31AC5BDF80075A78A /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		95FD4AC41AC5BDF80075A78A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		95FD4ACB1AC9D68C0075A78A /* EventTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableCell.h; sourceTree = "<group>"; };
+		95FD4ACC1AC9D68C0075A78A /* EventTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +229,8 @@
 				0AEBF09D1AC5281700F221E0 /* loadParse.m */,
 				0AEBF0A81AC635E000F221E0 /* CustonCellInvite.h */,
 				0AEBF0A91AC635E000F221E0 /* CustonCellInvite.m */,
+				95FD4ACB1AC9D68C0075A78A /* EventTableCell.h */,
+				95FD4ACC1AC9D68C0075A78A /* EventTableCell.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -330,7 +335,7 @@
 				TargetAttributes = {
 					0A32BF0A1ABE039E00025127 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6D93DA2TT6;
+						DevelopmentTeam = 958464RCCM;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -342,7 +347,7 @@
 					};
 					0A32BF231ABE039E00025127 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6D93DA2TT6;
+						DevelopmentTeam = 958464RCCM;
 						TestTargetID = 0A32BF0A1ABE039E00025127;
 					};
 				};
@@ -405,6 +410,7 @@
 				0AEBF0AA1AC635E000F221E0 /* CustonCellInvite.m in Sources */,
 				955619611AC320DF00010C68 /* SettingsViewController.m in Sources */,
 				0A32BF171ABE039E00025127 /* ViewController.m in Sources */,
+				95FD4ACD1AC9D68C0075A78A /* EventTableCell.m in Sources */,
 				0A32BF141ABE039E00025127 /* AppDelegate.m in Sources */,
 				0A32BF111ABE039E00025127 /* main.m in Sources */,
 				95FD4AC51AC5BDF80075A78A /* MapViewController.m in Sources */,
@@ -532,13 +538,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rafaela dos Santos Bertolini (J7H8THG3DL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rafaela dos Santos Bertolini (J7H8THG3DL)";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = SpotMark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "db826cb5-d7fa-4b53-9ef7-07870b828ba5";
 			};
 			name = Debug;
 		};
@@ -546,13 +552,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rafaela dos Santos Bertolini (J7H8THG3DL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rafaela dos Santos Bertolini (J7H8THG3DL)";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = SpotMark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "db826cb5-d7fa-4b53-9ef7-07870b828ba5";
 			};
 			name = Release;
 		};

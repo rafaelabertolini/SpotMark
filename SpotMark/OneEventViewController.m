@@ -27,7 +27,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *invite;
 @property (weak, nonatomic) IBOutlet UIButton *exit;
 
-
 @end
 
 @implementation OneEventViewController
@@ -45,6 +44,8 @@
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = _evt.name;
+    
+    //[_mapView setZoomEnabled:YES];
     
     _eventName.text = _evt.name;
     _eventDescription.text = _evt.desc;
@@ -152,7 +153,7 @@
 //- (void)zoomIn{
 //    MKUserLocation *userLocation = _mapView.userLocation;
 //    MKCoordinateRegion region =
-//    MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate, 2000000, 2000000);
+//    MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate, );
 //    [_mapView setRegion:region animated:NO];
 //}
 
