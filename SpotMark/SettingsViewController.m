@@ -47,8 +47,8 @@
    [self performSegueWithIdentifier:@"gotoLogin" sender:nil];
 }
 
-/*
-#pragma mark - Navigation
+
+
 
 
 @end
