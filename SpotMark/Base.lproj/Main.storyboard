@@ -424,6 +424,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateLabel" destination="KrG-I6-kdh" id="r4Y-5c-8hO"/>
+                                            <outlet property="eventImage" destination="3bp-DW-uCh" id="RJL-cf-Acl"/>
                                             <outlet property="localLabel" destination="ZrZ-qn-iEa" id="aEi-ky-XOH"/>
                                             <outlet property="nameLabel" destination="aru-xq-Ccc" id="xBp-GO-zYy"/>
                                         </connections>
@@ -918,8 +919,8 @@
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ct6-r1-8sO"/>
-        <segue reference="07s-Np-hEV"/>
+        <segue reference="HFn-Re-Rbh"/>
+        <segue reference="Kvc-Bv-HLe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.96470588235294119" green="0.80784313725490198" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
