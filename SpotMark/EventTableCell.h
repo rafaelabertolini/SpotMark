@@ -15,5 +15,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *localLabel;
 //@property (nonatomic, weak) IBOutlet UIImageView *eventImage;
 
-
 @end

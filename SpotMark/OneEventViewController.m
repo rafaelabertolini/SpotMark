@@ -27,7 +27,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *invite;
 @property (weak, nonatomic) IBOutlet UIButton *exit;
 
-
 @end
 
 @implementation OneEventViewController

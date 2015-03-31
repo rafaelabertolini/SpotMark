@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblUsername;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property User *user1;
-
 @property BOOL isLogged;
 
 @end

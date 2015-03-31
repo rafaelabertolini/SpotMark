@@ -13,5 +13,4 @@
 @property NSMutableArray *guestsList;
 @property NSMutableArray *messagesList;
 
-
 @end

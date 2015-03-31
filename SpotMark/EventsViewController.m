@@ -18,7 +18,9 @@
 @interface EventsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @property Event *evt;
+
 @end
 
 @implementation EventsViewController

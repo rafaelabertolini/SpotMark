@@ -9,9 +9,7 @@
 #import <foundation/Foundation.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface User : NSObject {
-  
-}
+@interface User : NSObject
 
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *email;

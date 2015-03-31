@@ -12,7 +12,9 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface ViewController ()
+
 @property BOOL isLogged;
+
 @end
 
 @implementation ViewController
