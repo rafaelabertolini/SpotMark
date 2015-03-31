@@ -276,7 +276,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableViewM" destination="JHe-eA-Cig" id="cSB-lO-CS7"/>
-                        <segue destination="vnJ-lx-YrF" kind="show" id="gPy-Uq-59d"/>
+                        <segue destination="vnJ-lx-YrF" kind="show" identifier="gotoChat" id="gPy-Uq-59d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQ0-ia-5Yn" userLabel="First Responder" sceneMemberID="firstResponder"/>
