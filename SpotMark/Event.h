@@ -16,8 +16,7 @@
 @property NSString *name;
 @property NSString *desc;
 @property NSString *local;
-@property NSString *date;
-@property NSString *time;
+@property NSString *datetime;
 @property NSMutableArray *participants;
 @property NSMutableArray *feed;
 @property NSString *eventId;
