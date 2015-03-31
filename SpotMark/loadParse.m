@@ -42,4 +42,21 @@
     return [objects mutableCopy];
 }
 
+-(void)sairEvento:(NSString *)user :(NSString *)event{
+    PFQuery *query = [PFQuery queryWithClassName:@"UserEvent"];
+    [query whereKey:@"user" equalTo:user];
+    [query whereKey:@"event" equalTo:event];
+    NSArray *objects = query.findObjects;
+    PFObject *delete = [objects objectAtIndex:0];
+    [delete deleteInBackground];
+}
+
+-(void) excluirEvento:(NSString *)event{
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query whereKey:@"objectId" equalTo:event];
+    NSArray *objects = query.findObjects;
+    PFObject *delete = [objects objectAtIndex:0];
+    [delete deleteInBackground];
+}
+
 @end
