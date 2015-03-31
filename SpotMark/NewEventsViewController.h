@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewEventsViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface NewEventsViewController : UIViewController
 
 @end

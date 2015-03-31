@@ -67,8 +67,8 @@
     _evt.name = e[@"name"];
     _evt.desc = e[@"description"];
     _evt.local = e[@"local"];
-    _evt.date = e[@"date"];
-    _evt.time = e[@"time"];
+    _evt.datetime = e[@"datetime"];
+    //_evt.time = e[@"time"];
     _evt.admin = e[@"admin"];
     _evt.idEvent = e.objectId;
     [self performSegueWithIdentifier:@"gotoEventDetail" sender: indexPath];
