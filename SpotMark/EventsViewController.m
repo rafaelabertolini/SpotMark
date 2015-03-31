@@ -57,7 +57,7 @@
     cell.nameLabel.text = e[@"name"];
     cell.dateLabel.text = e[@"dateTime"];
     cell.localLabel.text = e[@"local"];
-  //  cell.eventImage.image = e[@"categoria"];
+    cell.eventImage.image = e[@"category"];
     return cell;
 }
 
@@ -68,7 +68,6 @@
     _evt.desc = e[@"description"];
     _evt.local = e[@"local"];
     _evt.datetime = e[@"datetime"];
-    //_evt.time = e[@"time"];
     _evt.admin = e[@"admin"];
     _evt.idEvent = e.objectId;
     [self performSegueWithIdentifier:@"gotoEventDetail" sender: indexPath];
