@@ -13,21 +13,21 @@
 #import "User.h"
 
 @interface NewEventsViewController ()
-
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UITextField *txtDescription;
 @property (weak, nonatomic) IBOutlet UITextField *txtLocalization;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *category;
+@property (weak, nonatomic) IBOutlet UIPickerView *category;
 @property Event *e;
 @property NSArray *listCategory;
-
+@property NSInteger *rowPickerView;
 @end
 
 @implementation NewEventsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     _listCategory = @[@"Esporte", @"Reunião", @"Lazer", @"Festa"];
     
     [self.datePicker setValue:[UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70] forKeyPath:@"textColor"];
@@ -58,18 +58,18 @@
     _e.name = _txtName.text;
     _e.desc = _txtDescription.text;
     _e.local = _txtLocalization.text;
-    [dateFormat setDateFormat:@"d/M/YYYY hh:mm"];
-    _e.datetime = [dateFormat stringFromDate:_datePicker.date];
-   // [dateFormat setDateFormat:@"hh:mm"];
-    //_e.time = [dateFormat stringFromDate:_datePicker.date];
-    _e.category = [_category titleForSegmentAtIndex:[_category selectedSegmentIndex]];
+    [dateFormat setDateFormat:@"d/M/YYYY"];
+    _e.date = [dateFormat stringFromDate:_datePicker.date];
+    [dateFormat setDateFormat:@"hh:mm"];
+    _e.time = [dateFormat stringFromDate:_datePicker.date];
     
     //ADICIONA O EVENTO AO PARSE
     PFObject *saveObject = [PFObject objectWithClassName:@"Event"];
     saveObject[@"name"] =  _e.name;
     saveObject[@"description"] = _e.desc;
     saveObject[@"local"] = _e.local;
-    saveObject[@"datetime"] = _e.datetime;
+    saveObject[@"date"] = _e.date;
+    saveObject[@"time"] = _e.time;
     saveObject[@"admin"] = user1.email;
     saveObject[@"category"] = _e.category;
     [saveObject save];
@@ -88,8 +88,7 @@
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
-    
-        [self performSegueWithIdentifier:@"gotoOneEvent" sender:nil];
+    [self performSegueWithIdentifier:@"gotoOneEvent" sender:nil];
 
 }
 
@@ -97,6 +96,23 @@
     OneEventViewController *oevt = (OneEventViewController *) segue.destinationViewController;
     oevt.evt = _e;
     oevt.newEvent=YES;
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+// The number of rows of data
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return 4;
+}
+
+// The data to return for the row and component (column) that's being passed in
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return [_listCategory objectAtIndex:row];
 }
 
 - (BOOL) hidesBottomBarWhenPushed{

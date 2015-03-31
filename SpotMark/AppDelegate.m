@@ -27,7 +27,6 @@
                   clientKey:@"UlA9Y5wpNe1nFWADy9jLmGCHCoPT1dnkIWdAJ2RN"];
     //[PFFacebookUtils initializeFacebook];
     
-    // Register for Push Notitications
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
                                                     UIUserNotificationTypeBadge |
                                                     UIUserNotificationTypeSound);
@@ -36,12 +35,11 @@
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
     
-    
     [FBProfilePictureView class];
     [FBLoginView class];
     
     [[UINavigationBar appearance] setTranslucent:NO];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:1 green:0.58 blue:0 alpha:1]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:1 green:0.58 blue:0 alpha:255]];
     
     [[UITabBar appearance] setBarTintColor:[UIColor clearColor]];
     [[UITabBar appearance] setBackgroundImage:[UIImage new]];
@@ -54,10 +52,8 @@
     // Store the deviceToken in the current installation and save it to Parse.
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation setDeviceTokenFromData:deviceToken];
+    currentInstallation.channels = @[ @"global" ];
     [currentInstallation saveInBackground];
-    
-    NSLog(@"My token is: %@", deviceToken);
-
 }
 
 
@@ -66,10 +62,8 @@
 }
 
 
-- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
-{
-    NSLog(@"Failed to get token, error: %@", error);
-}
+
+
 
 
 

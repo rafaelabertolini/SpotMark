@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface InviteViewController : UIViewController
-
 @property NSMutableArray *friend_list;
 @property NSString *idEvent;
-
 @end

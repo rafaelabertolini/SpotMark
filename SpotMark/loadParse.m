@@ -51,18 +51,6 @@
     [delete deleteInBackground];
 }
 
--(NSMutableArray *)LoadMessages: (NSString *) idEvent{
-    NSUInteger limit = 1000;
-    NSUInteger skip = 0;
-    PFQuery *query = [PFQuery queryWithClassName:@"Chat"];
-    [query orderByDescending:@"createdAt"];
-    [query whereKey:@"Event" equalTo:idEvent];
-    [query setLimit: limit];
-    [query setSkip: skip];
-    NSArray *objects = query.findObjects;
-    return [objects mutableCopy];
-}
-
 -(void) excluirEvento:(NSString *)event{
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
     [query whereKey:@"objectId" equalTo:event];

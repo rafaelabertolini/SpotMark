@@ -10,6 +10,5 @@
 
 @interface MessagesViewController : UIViewController
 
-@property NSMutableArray *messages;
-
 @end
+//

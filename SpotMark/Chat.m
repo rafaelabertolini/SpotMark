@@ -8,6 +8,8 @@
 
 #import "Chat.h"
 
-@implementation Chat
+@implementation NSObject (Chat)
+
+
 
 @end

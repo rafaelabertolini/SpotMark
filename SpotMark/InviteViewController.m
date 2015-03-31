@@ -13,10 +13,8 @@
 #import <Parse/Parse.h>
 
 @interface InviteViewController ()
-
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property User *user1;
-
 @end
 
 @implementation InviteViewController

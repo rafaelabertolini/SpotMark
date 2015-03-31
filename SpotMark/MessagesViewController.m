@@ -7,19 +7,9 @@
 //
 
 #import "MessagesViewController.h"
-#import "loadParse.h"
-#import "User.h"
-#import <Parse/Parse.h>
-#import "Chat.h"
-
-
 
 @interface MessagesViewController ()
-
 @property (weak, nonatomic) IBOutlet UITableView *tableViewM;
-@property Chat *chat;
-
-
 
 @end
 
@@ -38,39 +28,6 @@
     self.title = @"Messages";
     
 }
--(void)viewWillAppear:(BOOL)animated{
-    [_tableViewM reloadData];
-    loadParse *lp = [[loadParse alloc] init];
-    User *user1 = [User sharedUser];
-    _messages = [lp LoadMessages:user1.objectId];
-    
-}
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return _messages.count;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    PFObject *m = [_messages objectAtIndex:(int)indexPath.row];
-    cell.textLabel.text = m[@"name"];
-    return cell;
-}
-
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    _chat = [[Chat alloc] init];
-    PFObject *m = [_messages objectAtIndex:(int)indexPath.row];
-    _chat.name = m[@"name"];
-    
-}
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

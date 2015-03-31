@@ -13,14 +13,11 @@
 #import "Event.h"
 #import "loadParse.h"
 #import "User.h"
-#import "EventTableCell.h"
 
 @interface EventsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @property Event *evt;
-
 @end
 
 @implementation EventsViewController
@@ -51,13 +48,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"cell";
-    EventTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    static NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     PFObject *e = [_events objectAtIndex:(int)indexPath.row];
-    cell.nameLabel.text = e[@"name"];
-    cell.dateLabel.text = e[@"dateTime"];
-    cell.localLabel.text = e[@"local"];
-    cell.eventImage.image = e[@"category"];
+    cell.textLabel.text = e[@"name"];
     return cell;
 }
 
@@ -67,7 +61,8 @@
     _evt.name = e[@"name"];
     _evt.desc = e[@"description"];
     _evt.local = e[@"local"];
-    _evt.datetime = e[@"datetime"];
+    _evt.date = e[@"date"];
+    _evt.time = e[@"time"];
     _evt.admin = e[@"admin"];
     _evt.idEvent = e.objectId;
     [self performSegueWithIdentifier:@"gotoEventDetail" sender: indexPath];

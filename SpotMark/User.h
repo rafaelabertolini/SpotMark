@@ -7,15 +7,15 @@
 //
 
 #import <foundation/Foundation.h>
-#import <FacebookSDK/FacebookSDK.h>
 
-@interface User : NSObject
+@interface User : NSObject {
+  
+}
 
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *email;
 @property (nonatomic, retain) NSMutableArray *friends_list;
 @property (nonatomic, retain) NSString *objectId;
-@property (nonatomic, retain) NSURL *imageUrl;
 
 + (id)sharedUser;
 

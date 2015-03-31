@@ -15,6 +15,7 @@
 
 @property Event *evt;
 @property BOOL newEvent;
+
 @property NSMutableArray *posts;
 
 @end
