@@ -81,8 +81,6 @@
     userEvent [@"event"] = _e.idEvent;
     [userEvent saveInBackground];
     
-    
-    
     // SE NAO OCORRER ERRO MOSTRA MENSAGEM E VAI P/ A TELA DO EVENTO
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Evento criado com sucesso!"
                                                     message:@""
