@@ -8,13 +8,13 @@
 
 #import "SettingsViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
-#import "User.h"
-#import "ViewController.h"
+
 
 @interface SettingsViewController ()
 @property (weak, nonatomic) IBOutlet FBProfilePictureView *profilePicture;
 @property (weak, nonatomic) IBOutlet UILabel *lblUsername;
 @property (weak, nonatomic) IBOutlet FBLoginView *logoutButtom;
+@property SettingsViewController *svc;
 
 @property BOOL isLogged;
 
@@ -24,12 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    User *user2 = [User sharedUser];
-    self.lblUsername.text = user2.name;
-    _profilePicture.profileID = user2.Picture;
-    
     
     
 
@@ -47,13 +41,9 @@
     if (FBSession.activeSession.isOpen && _isLogged==false) {
         _isLogged=true;
         
-        //User *user2 = [User sharedUser];
-        //self.lblUsername.text = user2.name;
-        //_profilePicture = user2.imageUrl;
-        
-        [self performSegueWithIdentifier:@"gotoBegin" sender:nil];
-        
-        
+        //self.profilePicture.profileID = user.id;
+        //self.lblUsername.text = user.name;
+        //[self performSegueWithIdentifier:@"gotoLogin" sender:nil];
     }
 }
 

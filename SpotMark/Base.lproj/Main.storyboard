@@ -156,7 +156,6 @@
                         <outlet property="lblUsername" destination="NBW-9l-vV9" id="C9a-aY-kpb"/>
                         <outlet property="logoutButtom" destination="Kpb-ny-3UZ" id="Enh-Mx-uNk"/>
                         <outlet property="profilePicture" destination="aFA-Zi-CSE" id="tEc-g7-spj"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="gotoBegin" id="gp6-wc-1h8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvi-nG-UFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -256,7 +255,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableViewM" destination="JHe-eA-Cig" id="cSB-lO-CS7"/>
-                        <segue destination="vnJ-lx-YrF" kind="show" id="gPy-Uq-59d"/>
+                        <segue destination="vnJ-lx-YrF" kind="show" identifier="gotoChat" id="gPy-Uq-59d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQ0-ia-5Yn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -507,8 +506,28 @@
                                     <action selector="viewMap:" destination="a7T-MV-DoO" eventType="touchDown" id="LW9-01-chM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkW-lE-Hh9">
+                                <rect key="frame" x="240" y="205" width="98" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Excluir Evento">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sair:" destination="a7T-MV-DoO" eventType="touchUpInside" id="lbY-a6-bHg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZC-3b-oCs">
+                                <rect key="frame" x="248" y="263" width="82" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Participants">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="participants:" destination="a7T-MV-DoO" eventType="touchUpInside" id="uIl-Xl-sMf"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKh-vJ-dzy">
-                                <rect key="frame" x="167" y="263" width="59" height="30"/>
+                                <rect key="frame" x="155" y="263" width="59" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Invite">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -535,6 +554,7 @@
                         <outlet property="eventDescription" destination="yU1-GZ-lbQ" id="92n-GF-hvQ"/>
                         <outlet property="eventImage" destination="yvN-ek-7WF" id="9y6-ZW-Ki1"/>
                         <outlet property="eventName" destination="Ws9-6r-LQ6" id="I6B-MJ-h9c"/>
+                        <outlet property="exit" destination="qkW-lE-Hh9" id="9Qg-nQ-xzV"/>
                         <outlet property="invite" destination="cKh-vJ-dzy" id="cWg-gA-MqW"/>
                         <outlet property="mapView" destination="dpY-uS-JQp" id="t5h-0O-XXI"/>
                         <outlet property="tableView" destination="mfX-C6-Sg8" id="BeQ-Ns-Iqd"/>
@@ -813,8 +833,8 @@
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="07s-Np-hEV"/>
         <segue reference="HFn-Re-Rbh"/>
+        <segue reference="07s-Np-hEV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.96470588235294119" green="0.80784313725490198" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
