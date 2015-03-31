@@ -29,6 +29,8 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>CLLocationManager </key>
+	<string>requestAlwaysAuthorization</string>
 	<key>FacebookAppID</key>
 	<string>822847341137531</string>
 	<key>FacebookDisplayName</key>
@@ -37,10 +39,8 @@
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Posso usar sua localização?</string>
-	<key>CLLocationManager </key>
-	<string>requestAlwaysAuthorization</string>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>Main</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
