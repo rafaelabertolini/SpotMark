@@ -88,7 +88,8 @@
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
-    [self performSegueWithIdentifier:@"gotoOneEvent" sender:nil];
+    
+        [self performSegueWithIdentifier:@"gotoOneEvent" sender:nil];
 
 }
 
